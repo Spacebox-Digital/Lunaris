@@ -87,7 +87,6 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        prefix: 'lui',
         default: {
           // T-423 Bring these colors into the design system to be accounted for
           // T-424 #lunaris - update these colors to vars for use with pack
