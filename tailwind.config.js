@@ -90,7 +90,7 @@ module.exports = {
         prefix: 'lui',
         default: {
           // T-423 Bring these colors into the design system to be accounted for
-          // T-424 #lunaris - update these colors to match the design system
+          // T-424 #lunaris - update these colors to vars for use with pack
           // main theme colors
           "primary": "#a991f7",
           "primary-content": "#000816",
