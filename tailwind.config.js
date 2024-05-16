@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-// default config: https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+import { lunaris } from './lunaris.config';
+const colors = lunaris.theme.colors;
+const ui = lunaris.theme.ui;
 
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    // I think these could be removed and we can use tw defaults TBH
     screens: {
       xs: '30rem', // 480px
       sm: '40rem', // 640px
@@ -14,6 +17,7 @@ module.exports = {
       '2xl': '96rem', // 1536px
     },
     fontSize: {
+      // These should be set to our defaults or removed entirely IMO
       '2xs': ['0.625rem', {lineHeight: '1rem'}], // 10px
       xs: ['0.75rem', {lineHeight: '1rem'}], // 12px
       sm: ['0.875rem', {lineHeight: '1.25rem'}], // 14px
@@ -30,28 +34,29 @@ module.exports = {
       '9xl': ['8rem', {lineHeight: '1.25'}], // 128px
     },
     extend: {
-      fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
-      },
-      colors: {
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        accent1: 'var(--accent1)',
-        accent2: 'var(--accent2)',
-        black: 'var(--black)',
-        offBlack: 'var(--off-black)',
-        darkGray: 'var(--dark-gray)',
-        mediumDarkGray: 'var(--medium-dark-gray)',
-        mediumGray: 'var(--medium-gray)',
-        gray: 'var(--gray)',
-        lightGray: 'var(--light-gray)',
-        offWhite: 'var(--off-white)',
-        white: 'var(--white)',
-        text: 'var(--text)',
-        background: 'var(--background)',
-        border: 'var(--border)',
-      },
+      // Fonts not set by default. We know you're gonna change em... so why bother?
+      // fontFamily: {},
+
+      // T-428 #lunaris Remove old Pack colors once all section references are updated to use DaisUI colors
+      // colors: {
+      //   primary: 'var(--primary)',
+      //   secondary: 'var(--secondary)',
+      //   accent1: 'var(--accent1)',
+      //   accent2: 'var(--accent2)',
+      //   black: 'var(--black)',
+      //   offBlack: 'var(--off-black)',
+      //   darkGray: 'var(--dark-gray)',
+      //   mediumDarkGray: 'var(--medium-dark-gray)',
+      //   mediumGray: 'var(--medium-gray)',
+      //   gray: 'var(--gray)',
+      //   lightGray: 'var(--light-gray)',
+      //   offWhite: 'var(--off-white)',
+      //   white: 'var(--white)',
+      //   text: 'var(--text)',
+      //   background: 'var(--background)',
+      //   border: 'var(--border)',
+      // },
+      // I think I'd prefer to get rid of all of these, see end comment
       animation: {
         'spin-fast': 'spin 0.75s linear infinite',
         'bounce-high': 'bounce-high 0.75s infinite',
@@ -82,55 +87,80 @@ module.exports = {
           },
         },
       },
+      //removal end here... thoughts?
     },
   },
   daisyui: {
+    utils: true,
     themes: [
       {
         default: {
-          // T-423 Bring these colors into the design system to be accounted for
-          // T-424 #lunaris - update these colors to vars for use with pack
+          // IMPORTANT: Update these values in the lunaris.config.js file
+
           // main theme colors
-          "primary": "#a991f7",
-          "primary-content": "#000816",
-          "secondary": "#f6d860",
-          "secondary-content": "#060a00",
-          "accent": "#37cdbe",
-          "accent-content": "#e8dbcf",
-          "neutral": "#3d4451",
-          "neutral-content": "#cdc9c6",
-          "base-100": "#ffffff",
-          "base-200": "#cbdede",
-          "base-300": "#adbebe",
-          "base-content": "#131616",
+          "primary": colors.primary,
+          "primary-content": colors.primaryContent,
+          "secondary": colors.secondary,
+          "secondary-content": colors.secondaryContent,
+          "accent": colors.accent,
+          "accent-content": colors.accentContent,
+          "neutral": colors.neutral,
+          "neutral-content": colors.neutralContent,
+          "base-100": colors.base100,
+          "base-200": colors.base200,
+          "base-300": colors.base300,
+          "base-content": colors.baseContent,
 
           // other colors
-          "info": "#00e5ff",
-          "info-content": "#001216",
-          "success": "#1dff1a",
-          "success-content": "#001600",
-          "warning": "#db8800",
-          "warning-content": "#110600",
-          "error": "#ff506c",
-          "error-content": "#160204",
+          "info": colors.info,
+          "info-content": colors.infoContent,
+          "success": colors.success,
+          "success-content": colors.successContent,
+          "warning": colors.warning,
+          "warning-content": colors.warningContent,
+          "error": colors.error,
+          "error-content": colors.errorContent,
 
-          // component modifiers
-          "--rounded-box": "1rem",          // border radius rounded-box utility class, used in card and other large boxes
-          "--rounded-btn": "0.5rem",        // border radius rounded-btn utility class, used in buttons and similar element
-          "--rounded-badge": "1.9rem",      // border radius rounded-badge utility class, used in badges and similar
-          "--animation-btn": "0.25s",       // duration of animation when you click on button
-          "--animation-input": "0.2s",      // duration of animation for inputs like checkbox, toggle, radio, etc
-          "--btn-focus-scale": "0.95",      // scale transform of button when you focus on it
-          "--border-btn": "1px",            // border width of buttons
-          "--tab-border": "1px",            // border width of tabs
-          "--tab-radius": "0.5rem",         // border radius of tabs
+          // containers
+          "--rounded-box": ui.roundedBox,
+
+          // buttons
+          "--rounded-btn": ui.roundedBtn,
+          "--border-btn": ui.borderBtn,
+          "--animation-btn": ui.animationBtn,
+          "--btn-focus-scale": ui.btnFocusScale,
+
+          // inputs
+          "--animation-input": ui.animationInput,
+
+          // tabs
+          "--tab-border": ui.tabBorder,
+          "--tab-radius": ui.tabRadius,
+          "--tab-border": ui.tabBorder,
+
+          // badges
+          "--rounded-badge": ui.roundedBadge,
+
+          // toggle
+          "--tglbg": ui.tglbg,
+
+          // tooltips
+          "--tooltip-color": ui.tooltipColor,
+          "--tooltip-text-color": ui.tooltipTextColor,
+
+          // glass
+          "--glass-blur": ui.glassBlur,
+          "--glass-opacity": ui.glassOpacity,
+          "--glass-border-opacity": ui.glassBorderOpacity,
+          "--glass-reflex-degree": ui.glassReflexDegree,
+          "--glass-reflex-opacity": ui.glassReflexOpacity,
+          "--glass-text-shadow-opacity": ui.glassTextShadowOpacity,
         }
       }
     ]
   },
   plugins: [
     require('daisyui'),
-    require('@tailwindcss/typography'),
-    require('@headlessui/tailwindcss')
+    require('@tailwindcss/typography')
   ],
 };
