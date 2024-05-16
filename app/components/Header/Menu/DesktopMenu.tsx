@@ -37,7 +37,7 @@ export function DesktopMenu({
                     <Link
                       aria-hidden={!hasContent}
                       aria-label={link?.text}
-                      className="hover-text-underline"
+                      className="hover-text-underline !text-primary"
                       to={link?.url}
                       newTab={link?.newTab}
                       onClick={handleDesktopMenuClose}
