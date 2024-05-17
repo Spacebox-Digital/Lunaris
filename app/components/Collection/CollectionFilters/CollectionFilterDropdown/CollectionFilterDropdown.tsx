@@ -65,18 +65,18 @@ export function CollectionFilterDropdown({
   const [isOpen, setIsOpen] = useState(defaultOpen || totalSelectedOptions > 0);
 
   return (
-    <div className="border-b border-border">
+    <div className={`border-b border-border`}>
       <button
         aria-label={filter.label}
         className={`relative flex min-h-12 w-full items-center justify-between gap-4 px-4 py-2 text-left`}
         onClick={() => setIsOpen(!isOpen)}
         type="button"
       >
-        <div className="flex flex-1 items-center">
-          <h3 className="text-nav">{filter.label}</h3>
+        <div className={`flex flex-1 items-center`}>
+          <h3 className={`text-nav`}>{filter.label}</h3>
 
           {totalSelectedOptions > 0 && (
-            <p className="ml-1 text-2xs text-mediumDarkGray">
+            <p className={`ml-1 text-2xs text-mediumDarkGray`}>
               ({totalSelectedOptions})
             </p>
           )}
@@ -95,12 +95,12 @@ export function CollectionFilterDropdown({
           isOpen ? 'flex' : 'hidden'
         }`}
       >
-        <ul className="flex w-full flex-col md:items-start md:gap-2">
+        <ul className={`flex w-full flex-col md:items-start md:gap-2`}>
           {parsedValuesWithIsActive.slice(0, maxOptions).map((option) => {
             return (
               <li
                 key={option.id}
-                className="w-full max-md:border-b max-md:border-border max-md:last:border-none"
+                className={`w-full max-md:border-b max-md:border-border max-md:last:border-none`}
               >
                 <CollectionFilterOption
                   addFilter={addFilter}
@@ -117,7 +117,7 @@ export function CollectionFilterDropdown({
         {maxOptions < filter.values.length && (
           <button
             type="button"
-            className="h-6 px-4 text-left text-sm font-bold uppercase max-md:h-11 md:text-xs"
+            className={`h-6 px-4 text-left text-sm font-bold uppercase max-md:h-11 md:text-xs`}
             aria-label="Show all options"
             onClick={() => setMaxOptions(filter.values.length)}
           >

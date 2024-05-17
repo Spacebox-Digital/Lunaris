@@ -80,7 +80,7 @@ export function AddToCart({
       </button>
 
       {isPdp && subtext && (
-        <p className="mt-1 text-center text-xs">{subtext}</p>
+        <p className={`mt-1 text-center text-xs`}>{subtext}</p>
       )}
     </div>
   );

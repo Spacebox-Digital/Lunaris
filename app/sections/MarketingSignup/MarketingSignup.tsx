@@ -23,8 +23,8 @@ export function MarketingSignup({cms}: {cms: MarketingSignupCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="px-contained py-contained flex flex-col gap-6">
-        <h2 className="text-h2 text-center text-current">{heading}</h2>
+      <div className={`px-contained py-contained flex flex-col gap-6`}>
+        <h2 className={`text-h2 text-center text-current`}>{heading}</h2>
 
         {(type === 'email' || type === 'emailPhone') && (
           <div
@@ -40,7 +40,7 @@ export function MarketingSignup({cms}: {cms: MarketingSignupCms}) {
 
             {type === 'emailPhone' && (
               <button
-                className="mt-3 self-center text-center underline"
+                className={`mt-3 self-center text-center underline`}
                 type="button"
                 onClick={() => setStep('phone')}
               >
@@ -58,7 +58,7 @@ export function MarketingSignup({cms}: {cms: MarketingSignupCms}) {
 
             {type === 'emailPhone' && (
               <button
-                className="mt-3 self-center text-center underline"
+                className={`mt-3 self-center text-center underline`}
                 type="button"
                 onClick={() => setStep('email')}
               >

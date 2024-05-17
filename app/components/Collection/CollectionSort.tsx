@@ -130,9 +130,9 @@ export function CollectionSort({
   );
 
   return (
-    <div className="ml-auto w-full md:w-auto md:min-w-32">
+    <div className={`ml-auto w-full md:w-auto md:min-w-32`}>
       <Select
-        className="[&>button]:max-md:h-14 [&>button]:max-md:rounded-none [&>button]:max-md:border-x-0 [&>button]:max-md:pl-4 [&>button]:max-md:pr-2.5 [&>ul]:max-md:w-[calc(100%-32px)]"
+        className={`[&>button]:max-md:h-14 [&>button]:max-md:rounded-none [&>button]:max-md:border-x-0 [&>button]:max-md:pl-4 [&>button]:max-md:pr-2.5 [&>ul]:max-md:w-[calc(100%-32px)]`}
         onSelect={handleSort}
         options={options}
         placeholder="Sort"
@@ -140,21 +140,23 @@ export function CollectionSort({
         placeholderClass="text-text"
       >
         <Svg
-          className="inline w-4 text-current"
+          className={`inline w-4 text-current`}
           src="/svgs/sort.svg#sort"
           title="Filter"
           viewBox="0 0 24 24"
         />
 
         {/* desktop */}
-        <div className="flex flex-1 overflow-hidden text-sm max-md:hidden">
-          <span className="truncate ">{selectedSort?.label || 'Sort'}</span>
+        <div className={`flex flex-1 overflow-hidden text-sm max-md:hidden`}>
+          <span className={`truncate `}>{selectedSort?.label || 'Sort'}</span>
         </div>
 
         {/* mobile */}
-        <div className="flex flex-1 items-center overflow-hidden md:hidden">
-          <span className="text-nav">Sort</span>
-          <span className="truncate pl-2 text-xs text-mediumDarkGray xs:pl-3 xs:text-sm">
+        <div className={`flex flex-1 items-center overflow-hidden md:hidden`}>
+          <span className={`text-nav`}>Sort</span>
+          <span
+            className={`truncate pl-2 text-xs text-mediumDarkGray xs:pl-3 xs:text-sm`}
+          >
             {selectedSort.label}
           </span>
         </div>

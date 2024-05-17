@@ -13,7 +13,7 @@ export function ThreeTilesTile({
   textColor,
 }: ThreeTilesTileProps) {
   return (
-    <div className="flex w-full flex-col gap-4" style={{color: textColor}}>
+    <div className={`flex w-full flex-col gap-4`} style={{color: textColor}}>
       <Link
         aria-label={item.heading}
         to={item.link?.url}
@@ -34,17 +34,19 @@ export function ThreeTilesTile({
         />
       </Link>
 
-      <div className="inset-0 flex size-full flex-col items-start gap-4">
+      <div className={`inset-0 flex size-full flex-col items-start gap-4`}>
         <Link
           aria-label={item.heading}
           to={item.link?.url}
           newTab={item.link?.newTab}
           type={item.link?.type}
         >
-          <div className="group flex">
-            <h2 className="text-xl lg:text-2xl">{item.heading}</h2>
+          <div className={`group flex`}>
+            <h2 className={`text-xl lg:text-2xl`}>{item.heading}</h2>
 
-            <span className="ml-3 block max-w-5 transition-transform lg:group-hover:translate-x-2">
+            <span
+              className={`ml-3 block max-w-5 transition-transform lg:group-hover:translate-x-2`}
+            >
               <Svg
                 src="/svgs/arrow-right.svg#arrow-right"
                 title="Arrow"
@@ -60,7 +62,7 @@ export function ThreeTilesTile({
           <div>
             <Link
               aria-label={item.link.text}
-              className="text-label text-main-underline"
+              className={`text-label text-main-underline`}
               to={item.link.url}
               newTab={item.link.newTab}
               tabIndex={-1}

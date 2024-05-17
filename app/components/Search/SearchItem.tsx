@@ -45,12 +45,12 @@ export function SearchItem({
   return (
     <Link
       aria-label={`View ${product.title}`}
-      className="relative grid grid-cols-[5.5rem_1fr] items-center gap-3"
+      className={`relative grid grid-cols-[5.5rem_1fr] items-center gap-3`}
       to={url}
       onClick={handleClick}
     >
       <div
-        className="bg-offWhite"
+        className={`bg-offWhite`}
         style={{
           aspectRatio:
             image?.width && image?.height
@@ -72,20 +72,20 @@ export function SearchItem({
         />
       </div>
 
-      <div className="flex flex-col justify-between gap-3">
+      <div className={`flex flex-col justify-between gap-3`}>
         <div>
-          <h4 className="text-h6">{product.title}</h4>
+          <h4 className={`text-h6`}>{product.title}</h4>
 
-          <p className="min-h-5 text-sm text-mediumDarkGray">{color}</p>
+          <p className={`min-h-5 text-sm text-mediumDarkGray`}>{color}</p>
         </div>
 
-        <div className="flex flex-wrap gap-x-1.5">
+        <div className={`flex flex-wrap gap-x-1.5`}>
           {compareAtPrice && (
-            <p className="text-sm text-mediumDarkGray line-through">
+            <p className={`text-sm text-mediumDarkGray line-through`}>
               {compareAtPrice}
             </p>
           )}
-          <p className="min-h-5 text-sm">{price}</p>
+          <p className={`min-h-5 text-sm`}>{price}</p>
         </div>
       </div>
     </Link>

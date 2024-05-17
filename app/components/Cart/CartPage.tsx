@@ -18,11 +18,11 @@ export function CartPage() {
 
   return (
     <section
-      className="md:px-contained py-contained"
+      className={`md:px-contained py-contained`}
       data-comp={CartPage.displayName}
     >
-      <div className="mx-auto max-w-screen-xl">
-        <h1 className="text-h2 mb-4 px-4">{heading || 'My Cart'}</h1>
+      <div className={`mx-auto max-w-screen-xl`}>
+        <h1 className={`text-h2 mb-4 px-4`}>{heading || 'My Cart'}</h1>
 
         <div
           className={`grid gap-x-4 md:grid-flow-col-dense md:grid-rows-[auto_1fr] md:gap-y-4 ${
@@ -31,7 +31,7 @@ export function CartPage() {
               : 'grid-cols-1'
           }`}
         >
-          <div className="md:row-span-2">
+          <div className={`md:row-span-2`}>
             <ul
               className={`relative border-y border-border ${
                 hasCartLines ? '' : 'min-h-80 py-12 md:min-h-[30rem]'
@@ -42,7 +42,7 @@ export function CartPage() {
                   return (
                     <li
                       key={line.id}
-                      className="border-b border-b-border last:border-none"
+                      className={`border-b border-b-border last:border-none`}
                     >
                       <CartLine line={line} />
                     </li>
@@ -55,16 +55,22 @@ export function CartPage() {
           </div>
 
           {hasCartLines && (
-            <div className="flex flex-col overflow-hidden md:gap-4">
-              <div className="[&>div]:max-md:border-t-0 [&>div]:md:rounded [&>div]:md:border [&>div]:md:border-border">
+            <div className={`flex flex-col overflow-hidden md:gap-4`}>
+              <div
+                className={`[&>div]:max-md:border-t-0 [&>div]:md:rounded [&>div]:md:border [&>div]:md:border-border`}
+              >
                 <CartTotals settings={cartSettings} />
               </div>
 
-              <div className="[&>div]:border-b-0 [&>div]:border-t [&>div]:border-border [&>div]:md:rounded [&>div]:md:border">
+              <div
+                className={`[&>div]:border-b-0 [&>div]:border-t [&>div]:border-border [&>div]:md:rounded [&>div]:md:border`}
+              >
                 <FreeShippingMeter settings={cartSettings} />
               </div>
 
-              <div className="[&>div]:border-border [&>div]:md:rounded [&>div]:md:border">
+              <div
+                className={`[&>div]:border-border [&>div]:md:rounded [&>div]:md:border`}
+              >
                 <CartUpsell settings={cartSettings} />
               </div>
             </div>

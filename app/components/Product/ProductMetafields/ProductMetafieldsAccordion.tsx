@@ -21,21 +21,21 @@ export function ProductMetafieldsAccordion({
         <>
           <Disclosure.Button
             aria-label={`${open ? 'Close' : 'Open'} accordion for ${title}`}
-            className="flex h-14 w-full items-center justify-between gap-x-4 bg-offWhite p-4"
+            className={`flex h-14 w-full items-center justify-between gap-x-4 bg-offWhite p-4`}
             type="button"
           >
-            <span className="text-sm font-bold">{title}</span>
+            <span className={`text-sm font-bold`}>{title}</span>
 
             {open ? (
               <Svg
-                className="w-4 text-current"
+                className={`w-4 text-current`}
                 src="/svgs/minus.svg#minus"
                 title="Minus"
                 viewBox="0 0 24 24"
               />
             ) : (
               <Svg
-                className="w-4 text-current"
+                className={`w-4 text-current`}
                 src="/svgs/plus.svg#plus"
                 title="Plus"
                 viewBox="0 0 24 24"
@@ -53,7 +53,7 @@ export function ProductMetafieldsAccordion({
             leaveTo="transform scale-97 opacity-0"
           >
             <Disclosure.Panel
-              className="px-4 pt-4 [&_h1]:mb-3 [&_h1]:text-sm [&_h2]:mb-3 [&_h2]:text-sm [&_h3]:mb-3 [&_h3]:text-sm [&_h4]:mb-3 [&_h4]:text-sm [&_h5]:mb-3 [&_h5]:text-sm [&_h6]:mb-3 [&_h6]:text-sm [&_ol]:!pl-4 [&_ol]:text-sm [&_p]:mb-3 [&_p]:text-sm [&_ul]:!pl-4 [&_ul]:text-sm"
+              className={`px-4 pt-4 [&_h1]:mb-3 [&_h1]:text-sm [&_h2]:mb-3 [&_h2]:text-sm [&_h3]:mb-3 [&_h3]:text-sm [&_h4]:mb-3 [&_h4]:text-sm [&_h5]:mb-3 [&_h5]:text-sm [&_h6]:mb-3 [&_h6]:text-sm [&_ol]:!pl-4 [&_ol]:text-sm [&_p]:mb-3 [&_p]:text-sm [&_ul]:!pl-4 [&_ul]:text-sm`}
               static
             >
               <Markdown>{value}</Markdown>

@@ -31,7 +31,7 @@ export function CartUpsell({closeCart, settings}: CartUpsellProps) {
   return showUpsell ? (
     <Disclosure
       as="div"
-      className="flex flex-col border-t border-t-border"
+      className={`flex flex-col border-t border-t-border`}
       defaultOpen
     >
       {({open}) => (
@@ -39,21 +39,25 @@ export function CartUpsell({closeCart, settings}: CartUpsellProps) {
           <Disclosure.Button
             aria-label={`${open ? 'Collapse' : 'Expand'} upsells`}
             type="button"
-            className="relative px-4 py-3"
+            className={`relative px-4 py-3`}
           >
-            <h3 className="px-5 text-center text-xs font-normal">{message}</h3>
+            <h3 className={`px-5 text-center text-xs font-normal`}>
+              {message}
+            </h3>
 
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-mediumDarkGray">
+            <div
+              className={`absolute right-4 top-1/2 -translate-y-1/2 text-mediumDarkGray`}
+            >
               {open ? (
                 <Svg
-                  className="w-4 text-current"
+                  className={`w-4 text-current`}
                   src="/svgs/minus.svg#minus"
                   title="Minus"
                   viewBox="0 0 24 24"
                 />
               ) : (
                 <Svg
-                  className="w-4 text-current"
+                  className={`w-4 text-current`}
                   src="/svgs/plus.svg#plus"
                   title="Plus"
                   viewBox="0 0 24 24"
@@ -73,7 +77,7 @@ export function CartUpsell({closeCart, settings}: CartUpsellProps) {
           >
             <Disclosure.Panel as={Fragment}>
               <Swiper
-                className="mb-4 w-full px-2"
+                className={`mb-4 w-full px-2`}
                 grabCursor
                 modules={[Navigation]}
                 navigation={{
@@ -99,10 +103,10 @@ export function CartUpsell({closeCart, settings}: CartUpsellProps) {
                 <div>
                   <div
                     // eslint-disable-next-line tailwindcss/no-custom-classname
-                    className="swiper-button-prev left-0 after:hidden"
+                    className={`swiper-button-prev left-0 after:hidden`}
                   >
                     <Svg
-                      className="max-w-4 text-text"
+                      className={`max-w-4 text-text`}
                       src="/svgs/chevron-left.svg#chevron-left"
                       title="Arrow Left"
                       viewBox="0 0 24 24"
@@ -111,10 +115,10 @@ export function CartUpsell({closeCart, settings}: CartUpsellProps) {
 
                   <div
                     // eslint-disable-next-line tailwindcss/no-custom-classname
-                    className="swiper-button-next right-0 after:hidden"
+                    className={`swiper-button-next right-0 after:hidden`}
                   >
                     <Svg
-                      className="max-w-4 text-text"
+                      className={`max-w-4 text-text`}
                       src="/svgs/chevron-right.svg#chevron-right"
                       title="Arrow Right"
                       viewBox="0 0 24 24"

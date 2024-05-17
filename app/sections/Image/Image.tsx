@@ -55,7 +55,7 @@ export function Image({cms}: {cms: ImageCms}) {
                   : FALLBACK_ASPECT_RATIO
                 : aspectMobile
             }
-            className="md:hidden"
+            className={`md:hidden`}
             crop={cropMobile}
             sizes={sizes}
           />
@@ -74,7 +74,7 @@ export function Image({cms}: {cms: ImageCms}) {
                   : FALLBACK_ASPECT_RATIO
                 : aspectDesktop
             }
-            className="max-md:hidden"
+            className={`max-md:hidden`}
             crop={cropDesktop}
             sizes={sizes}
           />

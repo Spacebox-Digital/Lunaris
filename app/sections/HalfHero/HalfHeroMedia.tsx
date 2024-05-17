@@ -14,8 +14,8 @@ export function HalfHeroMedia({
   const {image, video} = {...media};
 
   return (
-    <div className="absolute inset-0 size-full">
-      <div className="relative size-full overflow-hidden md:hidden">
+    <div className={`absolute inset-0 size-full`}>
+      <div className={`relative size-full overflow-hidden md:hidden`}>
         {video?.srcMobile && (
           <HalfHeroVideo
             autoplay={video.autoplay}
@@ -36,14 +36,14 @@ export function HalfHeroMedia({
             }}
             aspectRatio={getAspectRatioFromPercentage(aspectMobile)}
             crop={image?.cropMobile}
-            className="media-fill"
+            className={`media-fill`}
             loading={aboveTheFold ? 'eager' : 'lazy'}
             sizes="100vw"
           />
         )}
       </div>
 
-      <div className="relative hidden size-full overflow-hidden md:block">
+      <div className={`relative hidden size-full overflow-hidden md:block`}>
         {video?.srcDesktop && (
           <HalfHeroVideo
             autoplay={video.autoplay}
@@ -64,7 +64,7 @@ export function HalfHeroMedia({
             }}
             aspectRatio={getAspectRatioFromPercentage(aspectDesktop)}
             crop={image?.cropDesktop}
-            className="media-fill"
+            className={`media-fill`}
             loading={aboveTheFold ? 'eager' : 'lazy'}
             sizes="50vw"
           />

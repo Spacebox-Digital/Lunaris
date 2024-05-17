@@ -17,7 +17,7 @@ export function Markdown({cms}: {cms: MarkdownCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="px-contained py-contained">
+      <div className={`px-contained py-contained`}>
         <div className={`mx-auto ${section?.maxWidth}`}>
           <MarkdownComp centerAllText={centerAllText}>{content}</MarkdownComp>
         </div>

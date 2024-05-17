@@ -27,10 +27,12 @@ export function SearchInput({
   }, [searchOpen]);
 
   return (
-    <div className="border-b border-b-border p-4">
-      <div className="relative flex justify-between gap-3 rounded-full border border-border pl-3 pr-4">
+    <div className={`border-b border-b-border p-4`}>
+      <div
+        className={`relative flex justify-between gap-3 rounded-full border border-border pl-3 pr-4`}
+      >
         <Svg
-          className="w-5 text-text"
+          className={`w-5 text-text`}
           src="/svgs/search.svg#search"
           title="Search"
           viewBox="0 0 24 24"
@@ -38,7 +40,7 @@ export function SearchInput({
 
         <input
           aria-label="Search here"
-          className="min-w-0 flex-1 py-3 text-base outline-none"
+          className={`min-w-0 flex-1 py-3 text-base outline-none`}
           onChange={handleInput}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
             if (e.key === 'Enter' && !!e.currentTarget.value) {
@@ -63,7 +65,7 @@ export function SearchInput({
           type="button"
         >
           <Svg
-            className="w-4 text-text"
+            className={`w-4 text-text`}
             src="/svgs/close.svg#close"
             title="Close"
             viewBox="0 0 24 24"

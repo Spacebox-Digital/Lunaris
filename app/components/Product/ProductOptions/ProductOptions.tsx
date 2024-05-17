@@ -15,12 +15,12 @@ export function ProductOptions({product}: ProductOptionsProps) {
   const selectedOptionsMap = _product.selectedOptions as Record<string, string>;
 
   return (
-    <div className="flex flex-col">
+    <div className={`flex flex-col`}>
       {product.options?.map((option, index) => {
         return (
           <div
             key={index}
-            className="border-b border-b-border py-4 first:border-t first:border-t-border"
+            className={`border-b border-b-border py-4 first:border-t first:border-t-border`}
           >
             <ProductOptionValues
               option={option}

@@ -28,16 +28,18 @@ export function DesktopMenu({
       onMouseLeave={handleDesktopMenuHoverOut}
     >
       {hasContent && (
-        <div className="mx-auto grid max-w-[70rem] grid-cols-[12rem_1fr] gap-5 p-8 md:p-12">
+        <div
+          className={`mx-auto grid max-w-[70rem] grid-cols-[12rem_1fr] gap-5 p-8 md:p-12`}
+        >
           <div>
-            <ul className="flex flex-col gap-2">
+            <ul className={`flex flex-col gap-2`}>
               {links?.map(({link}, index) => {
                 return (
                   <li key={index}>
                     <Link
                       aria-hidden={!hasContent}
                       aria-label={link?.text}
-                      className="hover-text-underline !text-primary"
+                      className={`hover-text-underline !text-primary`}
                       to={link?.url}
                       newTab={link?.newTab}
                       onClick={handleDesktopMenuClose}
@@ -55,7 +57,7 @@ export function DesktopMenu({
               <Link
                 aria-hidden={!hasContent}
                 aria-label={mainLink.text}
-                className="btn-primary mt-5"
+                className={`btn-primary mt-5`}
                 to={mainLink.url}
                 newTab={mainLink.newTab}
                 onClick={handleDesktopMenuClose}
@@ -67,7 +69,7 @@ export function DesktopMenu({
             )}
           </div>
 
-          <ul className="grid grid-cols-2 gap-5">
+          <ul className={`grid grid-cols-2 gap-5`}>
             {imageLinks?.map(({alt, caption, image, link}, index) => {
               return (
                 <li key={index}>
@@ -92,7 +94,7 @@ export function DesktopMenu({
                       isStatic
                     />
 
-                    <p className="mt-3 text-sm">{caption}</p>
+                    <p className={`mt-3 text-sm`}>{caption}</p>
                   </Link>
                 </li>
               );

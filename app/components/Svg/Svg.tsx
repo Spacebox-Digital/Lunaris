@@ -1,7 +1,7 @@
 import {forwardRef} from 'react';
 
 // Tip: Change color of svg by changing the text color, e.g.:
-// <Svg className="text-red-500" ... />
+// <Svg className={`text-red-500`} ... />
 
 // Styles within an svg file within a <style> tag will not work
 // Instead use style prop, e.g. <path style="stroke-width:10;" ... />
@@ -28,7 +28,7 @@ export const Svg = forwardRef(
       >
         {title && <title>{title}</title>}
 
-        <use href={src} className="pointer-events-none" />
+        <use href={src} className={`pointer-events-none`} />
       </svg>
     );
   },

@@ -33,11 +33,13 @@ export function QuickShopOptions({
   }, [quickShopMultiText, selectedProduct.id]);
 
   return (
-    <div className="group/quickshop relative flex h-[3.125rem] w-full items-center justify-center overflow-hidden rounded border border-black">
-      <p className="btn-text truncate px-3">{option.text}</p>
+    <div
+      className={`group/quickshop relative flex h-[3.125rem] w-full items-center justify-center overflow-hidden rounded border border-black`}
+    >
+      <p className={`btn-text truncate px-3`}>{option.text}</p>
 
       <ul
-        className="invisible absolute inset-0 grid size-full bg-background group-focus/quickshop:visible md:group-hover/quickshop:visible"
+        className={`invisible absolute inset-0 grid size-full bg-background group-focus/quickshop:visible md:group-hover/quickshop:visible`}
         style={{
           gridTemplateColumns: `repeat(${option.values.length}, 1fr)`,
         }}
@@ -46,7 +48,7 @@ export function QuickShopOptions({
           return (
             <li
               key={value}
-              className="overflow-hidden border-r border-black last:border-none"
+              className={`overflow-hidden border-r border-black last:border-none`}
             >
               <QuickShopOption
                 optionName={option.name}

@@ -30,7 +30,7 @@ export const ThreeTilesRow = forwardRef(
     return tiles?.length > 0 ? (
       <div className={`mx-auto ${maxWidthClass}`} ref={ref}>
         {/* mobile/tablet */}
-        <div className="relative lg:hidden">
+        <div className={`relative lg:hidden`}>
           <Swiper
             grabCursor
             onSwiper={setSwiper}
@@ -50,7 +50,7 @@ export const ThreeTilesRow = forwardRef(
             {swiper &&
               tiles.slice(0, 3).map((item, index) => {
                 return (
-                  <SwiperSlide className="w-full" key={index}>
+                  <SwiperSlide className={`w-full`} key={index}>
                     <ThreeTilesTile
                       aspectRatio={aspectRatio}
                       item={item}
@@ -62,14 +62,14 @@ export const ThreeTilesRow = forwardRef(
           </Swiper>
 
           {!swiper && (
-            <div className="flex min-h-[25rem] items-center justify-center">
+            <div className={`flex min-h-[25rem] items-center justify-center`}>
               <Spinner width="32" />
             </div>
           )}
         </div>
 
         {/* desktop */}
-        <div className="hidden grid-cols-3 gap-x-5 lg:grid">
+        <div className={`hidden grid-cols-3 gap-x-5 lg:grid`}>
           {tiles.slice(0, 3).map((item, blockIndex) => {
             return (
               <div key={blockIndex}>

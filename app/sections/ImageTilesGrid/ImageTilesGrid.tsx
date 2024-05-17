@@ -28,9 +28,9 @@ export function ImageTilesGrid({cms}: {cms: ImageTilesGridCms}) {
       <div className={`py-4 md:py-6 ${fullBleedClasses}`}>
         <div className={`mx-auto ${maxWidthClass}`}>
           {(!!heading || !!subheading) && (
-            <div className="mb-6 px-4 text-center">
-              {heading && <h2 className="text-h2">{heading}</h2>}
-              {subheading && <h4 className="text-h4 mt-2">{subheading}</h4>}
+            <div className={`mb-6 px-4 text-center`}>
+              {heading && <h2 className={`text-h2`}>{heading}</h2>}
+              {subheading && <h4 className={`text-h4 mt-2`}>{subheading}</h4>}
             </div>
           )}
 
@@ -38,7 +38,7 @@ export function ImageTilesGrid({cms}: {cms: ImageTilesGridCms}) {
             <div className={`grid ${gridColsClasses} ${gapClasses}`}>
               {tiles.map((tile, index) => {
                 return (
-                  <div className="relative" key={index}>
+                  <div className={`relative`} key={index}>
                     <ImageTilesGridItem
                       aspectRatio={aspectRatio}
                       content={content}

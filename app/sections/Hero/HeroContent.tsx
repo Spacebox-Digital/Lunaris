@@ -68,16 +68,16 @@ export function HeroContent({
       >
         <div className={hiddenHeadingClasses}>
           {superheading && (
-            <p className="text-superheading max-lg:mb-1">{superheading}</p>
+            <p className={`text-superheading max-lg:mb-1`}>{superheading}</p>
           )}
 
           {aboveTheFold && isFirstSlide ? (
-            <h1 className="text-h1">{headingWithBreaks}</h1>
+            <h1 className={`text-h1`}>{headingWithBreaks}</h1>
           ) : (
-            <h2 className="text-h1">{headingWithBreaks}</h2>
+            <h2 className={`text-h1`}>{headingWithBreaks}</h2>
           )}
 
-          {subheading && <p className="mt-4">{subheading}</p>}
+          {subheading && <p className={`mt-4`}>{subheading}</p>}
         </div>
 
         {button?.buttons?.length > 0 && (
@@ -106,7 +106,7 @@ export function HeroContent({
       {isActiveSlide && button?.clickableSlide && (
         <Link
           aria-label={button.buttons?.[0]?.link?.text}
-          className="pointer-events-auto absolute inset-0 z-[1] size-full"
+          className={`pointer-events-auto absolute inset-0 z-[1] size-full`}
           to={button.buttons?.[0]?.link?.url}
           type={button.buttons?.[0]?.link?.type}
         />

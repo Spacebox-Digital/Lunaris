@@ -63,9 +63,9 @@ export function OrderTotals({order}: {order: Order}) {
         return (
           <div
             key={label}
-            className="grid grid-cols-[10fr_auto] items-center gap-3 border-b border-b-border py-5 last:border-none md:grid-cols-[10fr_1fr] md:gap-12"
+            className={`grid grid-cols-[10fr_auto] items-center gap-3 border-b border-b-border py-5 last:border-none md:grid-cols-[10fr_1fr] md:gap-12`}
           >
-            <p className="text-label">{label}</p>
+            <p className={`text-label`}>{label}</p>
 
             <Money
               as="p"

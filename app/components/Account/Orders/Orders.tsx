@@ -35,15 +35,15 @@ export function Orders() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 md:gap-10">
-      <h1 className="text-h4">{heading}</h1>
+    <div className={`flex flex-col gap-8 md:gap-10`}>
+      <h1 className={`text-h4`}>{heading}</h1>
 
       {!orders?.length && (
         <div
-          className="relative flex min-h-48 flex-col items-center justify-center gap-4"
+          className={`relative flex min-h-48 flex-col items-center justify-center gap-4`}
           role="status"
         >
-          <p className="text-center">{emptyOrdersText}</p>
+          <p className={`text-center`}>{emptyOrdersText}</p>
 
           {emptyOrdersButton?.text && (
             <Link className={`${buttonStyle}`} to={emptyOrdersButton.url}>
@@ -54,18 +54,20 @@ export function Orders() {
       )}
 
       {!!orders?.length && (
-        <div className="flex flex-col gap-8">
-          <div className="hidden grid-cols-[2fr_2fr_2fr_2fr_1fr] gap-3 md:grid">
+        <div className={`flex flex-col gap-8`}>
+          <div
+            className={`hidden grid-cols-[2fr_2fr_2fr_2fr_1fr] gap-3 md:grid`}
+          >
             {headers.map((header) => {
               return (
-                <h6 key={header} className="text-label">
+                <h6 key={header} className={`text-label`}>
                   {header}
                 </h6>
               );
             })}
           </div>
 
-          <ul className="flex flex-col gap-3 md:gap-8">
+          <ul className={`flex flex-col gap-3 md:gap-8`}>
             {orders.slice(startIndex, endIndex).map((order, index) => {
               return (
                 <li key={index}>
@@ -76,7 +78,7 @@ export function Orders() {
           </ul>
 
           {orders?.length > ordersPerPage && (
-            <div className="mt-8 self-center md:mt-10">
+            <div className={`mt-8 self-center md:mt-10`}>
               <Pagination
                 currentPage={currentPage}
                 pageNeighbors={1}

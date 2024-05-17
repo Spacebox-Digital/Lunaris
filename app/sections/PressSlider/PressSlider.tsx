@@ -24,7 +24,7 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
   return (
     <Container container={cms.container}>
       <div
-        className="md:px-contained py-contained"
+        className={`md:px-contained py-contained`}
         style={{
           color: textColor,
         }}
@@ -49,8 +49,10 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
             >
               {slides.map(({quote}, index) => {
                 return (
-                  <SwiperSlide className="w-full py-2" key={index}>
-                    <h2 className="mx-auto max-w-[50rem] px-4 text-center text-3xl font-bold md:text-4xl">
+                  <SwiperSlide className={`w-full py-2`} key={index}>
+                    <h2
+                      className={`mx-auto max-w-[50rem] px-4 text-center text-3xl font-bold md:text-4xl`}
+                    >
                       &quot;{quote}&quot;
                     </h2>
                   </SwiperSlide>
@@ -60,7 +62,7 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
 
             {/* desktop */}
             <ul
-              className="mx-auto mt-8 hidden gap-8 md:grid"
+              className={`mx-auto mt-8 hidden gap-8 md:grid`}
               style={{
                 gridTemplateColumns: `repeat(${slides.length}, 1fr)`,
                 width: `calc(1/6*100%*${slides.length})`,
@@ -69,7 +71,7 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
               {slides.map(({alt, image}, index) => {
                 const isActive = index === activeIndex;
                 return (
-                  <li key={index} className="flex justify-center">
+                  <li key={index} className={`flex justify-center`}>
                     <PressSliderThumb
                       alt={alt}
                       image={image}
@@ -85,10 +87,10 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
             </ul>
 
             {/* mobile */}
-            <div className="mt-4 md:hidden">
+            <div className={`mt-4 md:hidden`}>
               <Swiper
                 centeredSlides
-                className="max-md:cursor-grab"
+                className={`max-md:cursor-grab`}
                 modules={[Thumbs]}
                 onSwiper={setThumbsSwiper}
                 slidesPerView={2.25}
@@ -101,7 +103,7 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
                   const isActive = index === activeIndex;
                   return (
                     <SwiperSlide
-                      className="flex justify-center px-4"
+                      className={`flex justify-center px-4`}
                       key={index}
                     >
                       <PressSliderThumb

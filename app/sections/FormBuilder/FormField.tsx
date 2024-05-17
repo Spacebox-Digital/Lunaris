@@ -83,7 +83,7 @@ export function FormField({field}: Record<string, any>) {
 
         {isFileType && (
           <input
-            className="py-2"
+            className={`py-2`}
             id={name}
             name={name}
             required={required}
@@ -135,7 +135,7 @@ export function FormField({field}: Record<string, any>) {
             {options?.map((value) => (
               <label
                 key={`${name}.${value}`}
-                className="flex gap-1"
+                className={`flex gap-1`}
                 htmlFor={`${name}.${value}`}
               >
                 <input
@@ -159,7 +159,7 @@ export function FormField({field}: Record<string, any>) {
           >
             {options?.map((value) => (
               <label
-                className="flex gap-1"
+                className={`flex gap-1`}
                 htmlFor={`${name}.${value}`}
                 key={`${name}.${value}`}
               >
@@ -219,7 +219,7 @@ export function FormField({field}: Record<string, any>) {
       </label>
 
       {infoMessage && (
-        <p className="mt-2 text-xs text-mediumDarkGray xs:text-sm">
+        <p className={`mt-2 text-xs text-mediumDarkGray xs:text-sm`}>
           {infoMessage}
         </p>
       )}

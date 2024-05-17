@@ -11,7 +11,7 @@ export function Modal() {
 
   return modal.children ? (
     <Transition appear show={!!modal.children} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={closeModal}>
+      <Dialog as="div" className={`relative z-50`} onClose={closeModal}>
         {/* Overlay */}
         <Transition.Child
           as={Fragment}
@@ -22,7 +22,7 @@ export function Modal() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-[rgba(0,0,0,0.3)]" />
+          <div className={`fixed inset-0 bg-[rgba(0,0,0,0.3)]`} />
         </Transition.Child>
 
         <Transition.Child
@@ -41,19 +41,21 @@ export function Modal() {
           >
             <button
               aria-label="Close modal"
-              className="absolute right-0 top-0  z-10 flex size-7 items-center justify-center bg-offWhite"
+              className={`absolute right-0 top-0  z-10 flex size-7 items-center justify-center bg-offWhite`}
               onClick={closeModal}
               type="button"
             >
               <Svg
-                className="w-5 text-text"
+                className={`w-5 text-text`}
                 src="/svgs/close.svg#close"
                 title="Close"
                 viewBox="0 0 24 24"
               />
             </button>
 
-            <div className="scrollbar-hide px-contained py-contained max-h-[calc(var(--viewport-height)-2rem)] overflow-y-auto">
+            <div
+              className={`scrollbar-hide px-contained py-contained max-h-[calc(var(--viewport-height)-2rem)] overflow-y-auto`}
+            >
               {modal.children}
             </div>
           </Dialog.Panel>

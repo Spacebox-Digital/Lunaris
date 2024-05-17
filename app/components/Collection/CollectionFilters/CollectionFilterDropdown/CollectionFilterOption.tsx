@@ -45,7 +45,7 @@ export function CollectionFilterOption({
     const defaultMin = option?.parsedDefaultInput?.price?.min ?? currentMin;
     const defaultMax = option?.parsedDefaultInput?.price?.max ?? currentMax;
     return (
-      <div className="mx-auto w-full max-w-[400px] px-4 pb-4 md:pb-2">
+      <div className={`mx-auto w-full max-w-[400px] px-4 pb-4 md:pb-2`}>
         <MultiRangeSlider
           key={`${currentMin}-${currentMax}`}
           canReset={isActive}
@@ -105,7 +105,7 @@ export function CollectionFilterOption({
             aspectRatio="1/1"
             width="24"
             isStatic
-            className="media-fill"
+            className={`media-fill`}
           />
         )}
 
@@ -124,7 +124,7 @@ export function CollectionFilterOption({
         />
       </div>
 
-      <p className="flex-1 text-sm">
+      <p className={`flex-1 text-sm`}>
         {label}{' '}
         <span className={`text-2xs ${showCount ? 'inline' : 'hidden'}`}>
           ({count})

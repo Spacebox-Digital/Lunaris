@@ -99,7 +99,7 @@ export function CountrySelector() {
   }, [!!availableCountries?.length]);
 
   return (
-    <div ref={ref} className="w-[250px]">
+    <div ref={ref} className={`w-[250px]`}>
       <Select
         onSelect={handleSelect}
         options={countryOptions}

@@ -25,31 +25,31 @@ export function MobileSubmenu({
         mobileSubmenuContent ? 'visible' : 'invisible'
       }`}
     >
-      <div className="scrollbar-hide size-full overflow-y-auto">
+      <div className={`scrollbar-hide size-full overflow-y-auto`}>
         <button
           aria-label="Go back to main menu"
-          className="sticky top-0 z-[1] flex h-14 w-full items-center justify-between gap-4 border-b border-b-border bg-background p-4"
+          className={`sticky top-0 z-[1] flex h-14 w-full items-center justify-between gap-4 border-b border-b-border bg-background p-4`}
           onClick={() => handleMobileSubmenu(null)}
           type="button"
         >
           <Svg
-            className="w-5"
+            className={`w-5`}
             src="/svgs/arrow-left.svg#arrow-left"
             title="Arrow Left"
             viewBox="0 0 24 24"
           />
 
-          <h3 className="text-nav flex-1 text-left">{menuItem?.text}</h3>
+          <h3 className={`text-nav flex-1 text-left`}>{menuItem?.text}</h3>
         </button>
 
-        <div className="px-4 pt-5">
-          <ul className="mb-8 flex flex-col gap-2">
+        <div className={`px-4 pt-5`}>
+          <ul className={`mb-8 flex flex-col gap-2`}>
             {links?.map(({link}, index) => {
               return (
                 <li key={index}>
                   <Link
                     aria-label={link?.text}
-                    className="hover-text-underline"
+                    className={`hover-text-underline`}
                     to={link?.url}
                     newTab={link?.newTab}
                     onClick={handleCloseMobileMenu}
@@ -65,7 +65,7 @@ export function MobileSubmenu({
           {mainLink?.text && (
             <Link
               aria-label={mainLink.text}
-              className="btn-primary mb-8"
+              className={`btn-primary mb-8`}
               to={mainLink.url}
               newTab={mainLink.newTab}
               onClick={handleCloseMobileMenu}
@@ -76,7 +76,7 @@ export function MobileSubmenu({
           )}
 
           {imageLinks?.length > 0 && (
-            <ul className="mb-8 flex flex-col gap-5">
+            <ul className={`mb-8 flex flex-col gap-5`}>
               {imageLinks.map(({alt, caption, image, link}, index) => {
                 return (
                   <li key={index}>
@@ -98,7 +98,7 @@ export function MobileSubmenu({
                         sizes="(min-width: 768px) 400px, 100vw"
                       />
 
-                      <p className="mt-3 text-sm">{caption}</p>
+                      <p className={`mt-3 text-sm`}>{caption}</p>
                     </Link>
                   </li>
                 );

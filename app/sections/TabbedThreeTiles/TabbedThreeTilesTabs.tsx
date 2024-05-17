@@ -12,8 +12,8 @@ export function TabbedThreeTilesTabs({
     <div
       className={`mx-auto ${maxWidthClass} mb-6 flex justify-center border-b border-border md:mb-10`}
     >
-      <div className="scrollbar-hide overflow-x-auto px-4">
-        <Tab.List as="ul" className="flex gap-4 xs:gap-8">
+      <div className={`scrollbar-hide overflow-x-auto px-4`}>
+        <Tab.List as="ul" className={`flex gap-4 xs:gap-8`}>
           {tabs?.map((tab, index) => {
             return (
               <Tab as="li" key={index}>

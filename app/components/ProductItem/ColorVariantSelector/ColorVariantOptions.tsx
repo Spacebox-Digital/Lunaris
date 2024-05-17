@@ -46,7 +46,7 @@ export function ColorVariantOptions({
   const remainingColorCount = colorOptions.length - slicedColorOptions.length;
 
   return (
-    <ul className="flex flex-wrap gap-1">
+    <ul className={`flex flex-wrap gap-1`}>
       {slicedColorOptions.map((color, index) => {
         const productForColor = grouping
           ? productMapByColor?.[color]
@@ -72,10 +72,10 @@ export function ColorVariantOptions({
       })}
 
       {remainingColorCount > 0 && (
-        <li className="flex">
+        <li className={`flex`}>
           <button
             aria-label={`Show ${remainingColorCount} more color options`}
-            className="whitespace-nowrap text-2xs"
+            className={`whitespace-nowrap text-2xs`}
             onClick={() => setMaxCount(colorOptions.length)}
             type="button"
           >

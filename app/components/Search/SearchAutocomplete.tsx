@@ -34,10 +34,10 @@ export function SearchAutocomplete({
   const autocompleteResults = fetcher?.data?.searchResults?.results?.[0]?.items;
 
   return enabled && autocompleteResults && autocompleteResults.length > 0 ? (
-    <div className="mt-4">
-      <h3 className="text-xs italic">{heading}</h3>
+    <div className={`mt-4`}>
+      <h3 className={`text-xs italic`}>{heading}</h3>
 
-      <ul className="flex flex-wrap gap-x-2">
+      <ul className={`flex flex-wrap gap-x-2`}>
         {autocompleteResults.map(({title}: {title: string}) => {
           return (
             <li key={title}>
@@ -46,7 +46,7 @@ export function SearchAutocomplete({
                 onClick={() => handleSuggestion(title)}
                 type="button"
               >
-                <p className="text-underline text-xs">{title}</p>
+                <p className={`text-underline text-xs`}>{title}</p>
               </button>
             </li>
           );

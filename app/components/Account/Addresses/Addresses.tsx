@@ -49,13 +49,15 @@ export function Addresses() {
     ?.link?.text;
 
   return (
-    <div className="flex flex-col gap-8 md:gap-10">
-      <div className="flex flex-col items-start justify-start gap-4 md:flex-row md:justify-between">
-        <h1 className="text-h4">{heading}</h1>
+    <div className={`flex flex-col gap-8 md:gap-10`}>
+      <div
+        className={`flex flex-col items-start justify-start gap-4 md:flex-row md:justify-between`}
+      >
+        <h1 className={`text-h4`}>{heading}</h1>
 
         <button
           aria-label="Add a new address"
-          className="text-main-underline text-nav bg-[linear-gradient(var(--primary),var(--primary))] font-normal"
+          className={`text-main-underline text-nav bg-[linear-gradient(var(--primary),var(--primary))] font-normal`}
           onClick={() => {
             setIsCreateAddress(true);
             setInitialAddress(null);
@@ -81,14 +83,14 @@ export function Addresses() {
       {!addressesWithDefaultFirst?.length && (
         <div
           role="status"
-          className="relative flex min-h-48 items-center justify-center"
+          className={`relative flex min-h-48 items-center justify-center`}
         >
           You don&#39;t have any addresses saved yet
         </div>
       )}
 
       {!!addressesWithDefaultFirst?.length && (
-        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <ul className={`grid grid-cols-1 gap-6 md:grid-cols-2`}>
           {addressesWithDefaultFirst
             .slice(startIndex, endIndex)
             .map((address) => {
@@ -108,7 +110,7 @@ export function Addresses() {
       )}
 
       {addressesWithDefaultFirst?.length > RESULTS_PER_PAGE && (
-        <div className="mt-8 self-center md:mt-10">
+        <div className={`mt-8 self-center md:mt-10`}>
           <Pagination
             currentPage={currentPage}
             pageNeighbors={1}

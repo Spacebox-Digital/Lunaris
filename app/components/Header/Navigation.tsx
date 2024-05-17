@@ -48,7 +48,7 @@ export function Navigation({
       <div className={`order-2 flex items-center ${logoOrderClassDesktop}`}>
         <Link aria-label="Go to homepage" to="/">
           <Svg
-            className="h-10 text-text"
+            className={`h-10 text-text`}
             src="/svgs/logo.svg#logo"
             title="Storefront logo"
             viewBox="0 0 31 35"
@@ -57,14 +57,14 @@ export function Navigation({
       </div>
 
       <div className={`order-1 flex items-center ${menuOrderClassDesktop}`}>
-        <nav className="hidden h-full lg:flex">
-          <ul className="flex">
+        <nav className={`hidden h-full lg:flex`}>
+          <ul className={`flex`}>
             {menuItems?.map((item, index) => {
               const isHovered =
                 item.menuItem?.text === desktopMenuContent?.menuItem?.text;
 
               return (
-                <li key={index} className="flex">
+                <li key={index} className={`flex`}>
                   <Link
                     aria-label={item.menuItem?.text}
                     className={`group relative flex cursor-pointer items-center px-4 transition ${
@@ -75,7 +75,7 @@ export function Navigation({
                     onMouseEnter={() => handleDesktopMenuHoverIn(index)}
                     onMouseLeave={handleDesktopMenuHoverOut}
                   >
-                    <p className="text-nav">{item.menuItem?.text}</p>
+                    <p className={`text-nav`}>{item.menuItem?.text}</p>
 
                     <div
                       className={`absolute left-0 top-[calc(100%_-_2px)] h-[3px] w-full origin-center scale-0 border-t-2 border-t-primary bg-transparent transition after:w-full group-hover:scale-100 ${
@@ -89,12 +89,12 @@ export function Navigation({
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className={`flex items-center gap-4`}>
           <button
             aria-label={
               mobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'
             }
-            className="w-5 lg:hidden"
+            className={`w-5 lg:hidden`}
             onClick={() => {
               if (mobileMenuOpen) handleCloseMobileMenu();
               else handleOpenMobileMenu();
@@ -103,14 +103,14 @@ export function Navigation({
           >
             {mobileMenuOpen ? (
               <Svg
-                className="w-full text-text"
+                className={`w-full text-text`}
                 src="/svgs/close.svg#close"
                 title="Close"
                 viewBox="0 0 24 24"
               />
             ) : (
               <Svg
-                className="w-full text-text"
+                className={`w-full text-text`}
                 src="/svgs/menu.svg#menu"
                 title="Navigation"
                 viewBox="0 0 24 24"
@@ -120,12 +120,12 @@ export function Navigation({
 
           <button
             aria-label="Open search"
-            className="block w-5 md:hidden"
+            className={`block w-5 md:hidden`}
             onClick={openSearch}
             type="button"
           >
             <Svg
-              className="w-full text-text"
+              className={`w-full text-text`}
               src="/svgs/search.svg#search"
               title="Search"
               viewBox="0 0 24 24"
@@ -134,15 +134,15 @@ export function Navigation({
         </div>
       </div>
 
-      <div className="order-3 flex items-center justify-end gap-4 md:gap-5">
+      <div className={`order-3 flex items-center justify-end gap-4 md:gap-5`}>
         <button
           aria-label="Open search"
-          className="hidden w-5 md:block"
+          className={`hidden w-5 md:block`}
           onClick={openSearch}
           type="button"
         >
           <Svg
-            className="w-full text-text"
+            className={`w-full text-text`}
             src="/svgs/search.svg#search"
             title="Search"
             viewBox="0 0 24 24"
@@ -154,29 +154,29 @@ export function Navigation({
           to={customer ? `/account/orders` : `/account/login`}
         >
           <Svg
-            className="w-5 text-text"
+            className={`w-5 text-text`}
             src="/svgs/account.svg#account"
             title="Account"
             viewBox="0 0 24 24"
           />
         </Link>
 
-        <div className="relative flex items-center">
+        <div className={`relative flex items-center`}>
           <button
             aria-label="Open cart"
-            className="w-5"
+            className={`w-5`}
             onClick={openCart}
             type="button"
           >
             <Svg
-              className="w-full text-text"
+              className={`w-full text-text`}
               src="/svgs/cart.svg#cart"
               title="Cart"
               viewBox="0 0 24 24"
             />
           </button>
 
-          <p className="text-label-sm w-4 whitespace-nowrap pl-px font-bold">
+          <p className={`text-label-sm w-4 whitespace-nowrap pl-px font-bold`}>
             ({totalQuantity || 0})
           </p>
         </div>

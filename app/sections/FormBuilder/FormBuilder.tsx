@@ -84,15 +84,15 @@ export function FormBuilder({cms}: {cms: FormBuilderCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="px-contained py-contained">
+      <div className={`px-contained py-contained`}>
         <div className={`mx-auto ${section?.maxWidth}`}>
           {heading && (
-            <h2 className="text-h2 mb-4 md:mb-6 lg:mb-8">{heading}</h2>
+            <h2 className={`text-h2 mb-4 md:mb-6 lg:mb-8`}>{heading}</h2>
           )}
 
           <form
             action={endpoint}
-            className="grid grid-cols-2 gap-4"
+            className={`grid grid-cols-2 gap-4`}
             encType="multipart/form-data"
             method="POST"
             ref={formRef}
@@ -103,9 +103,9 @@ export function FormBuilder({cms}: {cms: FormBuilderCms}) {
               </Fragment>
             ))}
 
-            <div className="col-span-2 flex flex-col gap-4">
+            <div className={`col-span-2 flex flex-col gap-4`}>
               {recaptchaEnabled && (
-                <div ref={captchaRef} className="my-4">
+                <div ref={captchaRef} className={`my-4`}>
                   <div id="form-captcha-widget" />
                 </div>
               )}
@@ -122,9 +122,9 @@ export function FormBuilder({cms}: {cms: FormBuilderCms}) {
               </button>
 
               {errors?.length > 0 && (
-                <div className="flex flex-col gap-1">
+                <div className={`flex flex-col gap-1`}>
                   {errors.map((error) => (
-                    <p key={error} className="text-red-500">
+                    <p key={error} className={`text-red-500`}>
                       {error}
                     </p>
                   ))}

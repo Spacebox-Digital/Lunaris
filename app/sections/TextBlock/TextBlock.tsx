@@ -12,7 +12,7 @@ export function TextBlock({cms}: {cms: TextBlockCms}) {
   return (
     <Container container={cms.container}>
       <div
-        className="px-contained py-contained"
+        className={`px-contained py-contained`}
         style={{color: section?.textColor}}
       >
         <div
@@ -20,19 +20,23 @@ export function TextBlock({cms}: {cms: TextBlockCms}) {
         >
           {heading &&
             (section?.aboveTheFold ? (
-              <h1 className="text-h2 mx-auto max-w-[46rem]">{heading}</h1>
+              <h1 className={`text-h2 mx-auto max-w-[46rem]`}>{heading}</h1>
             ) : (
-              <h2 className="text-h2 mx-auto max-w-[46rem]">{heading}</h2>
+              <h2 className={`text-h2 mx-auto max-w-[46rem]`}>{heading}</h2>
             ))}
 
           {subtext && (
-            <div className="mx-auto max-w-[46rem] [&_a]:underline [&_h1]:text-base [&_h2]:text-base [&_h3]:text-base [&_h4]:text-base [&_h5]:text-base [&_h6]:text-base [&_p]:text-base">
+            <div
+              className={`mx-auto max-w-[46rem] [&_a]:underline [&_h1]:text-base [&_h2]:text-base [&_h3]:text-base [&_h4]:text-base [&_h5]:text-base [&_h6]:text-base [&_p]:text-base`}
+            >
               <Markdown>{subtext}</Markdown>
             </div>
           )}
 
           {buttons?.length > 0 && (
-            <ul className="mt-4 flex flex-col justify-center gap-4 xs:flex-row">
+            <ul
+              className={`mt-4 flex flex-col justify-center gap-4 xs:flex-row`}
+            >
               {buttons.slice(0, 2).map(({link, style}, index) => {
                 return (
                   <li key={index}>

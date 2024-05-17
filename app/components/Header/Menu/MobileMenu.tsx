@@ -44,7 +44,7 @@ export function MobileMenu({
           onClick={handleCloseMobileMenu}
         >
           <Svg
-            className="h-10 text-text"
+            className={`h-10 text-text`}
             src="/svgs/logo.svg#logo"
             title="Storefront logo"
             viewBox="0 0 31 35"
@@ -54,7 +54,7 @@ export function MobileMenu({
       secondHeaderElement={
         <button
           aria-label="Open search drawer"
-          className="absolute right-4 top-1/2 -translate-y-1/2"
+          className={`absolute right-4 top-1/2 -translate-y-1/2`}
           onClick={() => {
             handleCloseMobileMenu();
             openSearch();
@@ -62,7 +62,7 @@ export function MobileMenu({
           type="button"
         >
           <Svg
-            className="w-5"
+            className={`w-5`}
             src="/svgs/search.svg#search"
             title="Search"
             viewBox="0 0 24 24"
@@ -70,14 +70,14 @@ export function MobileMenu({
         </button>
       }
     >
-      <div className="relative w-full flex-1 overflow-x-hidden">
+      <div className={`relative w-full flex-1 overflow-x-hidden`}>
         <div
           className={`scrollbar-hide size-full overflow-y-auto ${
             mobileSubmenuContent ? 'invisible' : 'visible'
           }`}
         >
-          <nav className="mb-8 flex">
-            <ul className="flex w-full flex-col">
+          <nav className={`mb-8 flex`}>
+            <ul className={`flex w-full flex-col`}>
               {menuItems?.map((item, index) => {
                 const hasContent =
                   item.links?.length > 0 || item.imageLinks?.length > 0;
@@ -85,21 +85,21 @@ export function MobileMenu({
                 return (
                   <li
                     key={index}
-                    className="flex min-h-14 w-full border-b border-b-border"
+                    className={`flex min-h-14 w-full border-b border-b-border`}
                   >
                     {hasContent ? (
                       <button
                         aria-label={item.menuItem.text}
-                        className="flex h-14 w-full items-center justify-between gap-5 p-4"
+                        className={`flex h-14 w-full items-center justify-between gap-5 p-4`}
                         onClick={() => handleMobileSubmenu(index)}
                         type="button"
                       >
-                        <p className="text-nav flex-1 text-left">
+                        <p className={`text-nav flex-1 text-left`}>
                           {item.menuItem.text}
                         </p>
 
                         <Svg
-                          className="w-5"
+                          className={`w-5`}
                           src="/svgs/arrow-right.svg#arrow-right"
                           title="Arrow Right"
                           viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export function MobileMenu({
                     ) : (
                       <Link
                         aria-label={item.menuItem.text}
-                        className="text-nav flex h-14 w-full items-center p-4"
+                        className={`text-nav flex h-14 w-full items-center p-4`}
                         to={item.menuItem.url}
                         onClick={handleCloseMobileMenu}
                         newTab={item.menuItem.newTab}
@@ -124,8 +124,8 @@ export function MobileMenu({
           </nav>
 
           {products?.length > 0 && (
-            <div className="mb-8">
-              <h3 className="text-h5 mb-2 px-4">{productsHeading}</h3>
+            <div className={`mb-8`}>
+              <h3 className={`text-h5 mb-2 px-4`}>{productsHeading}</h3>
 
               <Swiper
                 modules={[A11y]}
@@ -134,7 +134,7 @@ export function MobileMenu({
                 slidesOffsetBefore={16}
                 slidesOffsetAfter={16}
                 grabCursor
-                className="mb-5"
+                className={`mb-5`}
               >
                 {products.map(({product}, index) => {
                   return (
@@ -152,7 +152,7 @@ export function MobileMenu({
           )}
 
           {additionalLinks?.length > 0 && (
-            <ul className="mb-8 flex flex-col gap-1 px-5">
+            <ul className={`mb-8 flex flex-col gap-1 px-5`}>
               {additionalLinks.map(({link}, index) => {
                 return (
                   <li key={index}>

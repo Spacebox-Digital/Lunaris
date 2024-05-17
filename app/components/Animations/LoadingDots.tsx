@@ -22,22 +22,22 @@ export function LoadingDots({
       } ${className}`}
     >
       {withStatusRole ? (
-        <p aria-live="assertive" className="sr-only" role="status">
+        <p aria-live="assertive" className={`sr-only`} role="status">
           {status}
         </p>
       ) : (
-        <p className="sr-only">{status}</p>
+        <p className={`sr-only`}>{status}</p>
       )}
       <div
-        className="size-2.5 animate-flash rounded-full [animation-delay:-0.3s]"
+        className={`size-2.5 animate-flash rounded-full [animation-delay:-0.3s]`}
         style={{backgroundColor: color}}
       />
       <div
-        className="size-2.5 animate-flash rounded-full [animation-delay:-0.15s]"
+        className={`size-2.5 animate-flash rounded-full [animation-delay:-0.15s]`}
         style={{backgroundColor: color}}
       />
       <div
-        className="size-2.5 animate-flash rounded-full"
+        className={`size-2.5 animate-flash rounded-full`}
         style={{backgroundColor: color}}
       />
     </div>

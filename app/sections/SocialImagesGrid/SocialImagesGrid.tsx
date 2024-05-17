@@ -23,7 +23,7 @@ export function SocialImagesGrid({cms}: {cms: SocialImagesGridCms}) {
                   to={item.url}
                   newTab
                 >
-                  <div className="relative aspect-square bg-offWhite">
+                  <div className={`relative aspect-square bg-offWhite`}>
                     <Image
                       data={{
                         altText: item.image?.altText || item.alt,
@@ -32,12 +32,12 @@ export function SocialImagesGrid({cms}: {cms: SocialImagesGridCms}) {
                         height: item.image?.height,
                       }}
                       aspectRatio="1/1"
-                      className="media-fill"
+                      className={`media-fill`}
                       sizes="(min-width: 768px) 25vw, 50vw"
                     />
 
                     <Svg
-                      className="absolute right-2 top-2 w-4 text-white lg:right-3 lg:top-3 lg:w-5"
+                      className={`absolute right-2 top-2 w-4 text-white lg:right-3 lg:top-3 lg:w-5`}
                       src={`/svgs/social/${item.platform}.svg#${item.platform}`}
                       title={item.platform}
                       viewBox="0 0 24 24"

@@ -42,7 +42,7 @@ export function ProductMediaThumbnail({
 
       {mediaContentType === 'VIDEO' && (
         <Svg
-          className="absolute left-1/2 top-1/2 w-1/3 -translate-x-1/2 -translate-y-1/2 text-white"
+          className={`absolute left-1/2 top-1/2 w-1/3 -translate-x-1/2 -translate-y-1/2 text-white`}
           src="/svgs/play.svg#play"
           title="Play"
           viewBox="0 0 24 24"

@@ -16,7 +16,7 @@ export function ImageTile({
   return (
     <Link
       aria-label={firstLink?.text}
-      className="w-full"
+      className={`w-full`}
       to={content?.clickableImage ? firstLink?.url : ''}
       newTab={firstLink?.newTab}
       type={firstLink?.type}
@@ -38,13 +38,13 @@ export function ImageTile({
           content?.darkOverlay ? 'bg-[rgba(0,0,0,0.2)]' : ''
         } ${content?.contentPosition}`}
       >
-        <div className="pointer-events-auto flex flex-col gap-3 lg:gap-4">
+        <div className={`pointer-events-auto flex flex-col gap-3 lg:gap-4`}>
           {tile.heading && (
-            <h3 className="text-xl text-white sm:text-2xl">{tile.heading}</h3>
+            <h3 className={`text-xl text-white sm:text-2xl`}>{tile.heading}</h3>
           )}
 
           {!content?.hideButtons && (firstLink?.text || secondLink?.text) && (
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className={`flex flex-wrap justify-center gap-3`}>
               {tile.buttons?.slice(0, 2).map(({link}, index) => {
                 // hide second button if clickable image is enabled
                 if (content?.clickableImage && index > 0) return null;

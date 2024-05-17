@@ -38,7 +38,7 @@ export function ProductMetafields({product}: ProductMetafieldsProps) {
   }, [product.metafields]);
 
   return metafields?.length ? (
-    <ul className="grid grid-cols-1 gap-4">
+    <ul className={`grid grid-cols-1 gap-4`}>
       {metafields.map((metafield) => {
         return (
           <li key={metafield.id}>

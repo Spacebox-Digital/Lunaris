@@ -17,7 +17,7 @@ export function MetaobjectTextBlock({cms}: {cms: Record<string, any>}) {
 
   return (
     <div
-      className="px-contained py-contained"
+      className={`px-contained py-contained`}
       style={{backgroundColor: 'var(--background)', color: 'var(--text)'}}
     >
       <div
@@ -25,21 +25,23 @@ export function MetaobjectTextBlock({cms}: {cms: Record<string, any>}) {
       >
         {heading &&
           (above_the_fold ? (
-            <h1 className="text-h2 mx-auto max-w-[46rem]">{heading}</h1>
+            <h1 className={`text-h2 mx-auto max-w-[46rem]`}>{heading}</h1>
           ) : (
-            <h2 className="text-h2 mx-auto max-w-[46rem]">{heading}</h2>
+            <h2 className={`text-h2 mx-auto max-w-[46rem]`}>{heading}</h2>
           ))}
 
         {subtext && (
-          <div className="mx-auto max-w-[46rem] [&_a]:underline [&_h1]:text-base [&_h2]:text-base [&_h3]:text-base [&_h4]:text-base [&_h5]:text-base [&_h6]:text-base [&_p]:text-base">
+          <div
+            className={`mx-auto max-w-[46rem] [&_a]:underline [&_h1]:text-base [&_h2]:text-base [&_h3]:text-base [&_h4]:text-base [&_h5]:text-base [&_h6]:text-base [&_p]:text-base`}
+          >
             <Markdown>{subtext}</Markdown>
           </div>
         )}
 
         {button_link && (
-          <ul className="mt-4 flex flex-col justify-center gap-4 xs:flex-row">
+          <ul className={`mt-4 flex flex-col justify-center gap-4 xs:flex-row`}>
             <li>
-              <Link className="btn-primary" href={button_link} newTab={true}>
+              <Link className={`btn-primary`} href={button_link} newTab={true}>
                 {button_link_text}
               </Link>
             </li>

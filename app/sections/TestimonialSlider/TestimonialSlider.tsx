@@ -17,17 +17,17 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="md:px-contained py-12 lg:py-16">
+      <div className={`md:px-contained py-12 lg:py-16`}>
         <div
           className={`${maxWidthClass} relative mx-auto flex flex-col items-center lg:px-14`}
         >
-          <h2 className="text-h2 px-4 text-center" style={{color: textColor}}>
+          <h2 className={`text-h2 px-4 text-center`} style={{color: textColor}}>
             {heading}
           </h2>
 
           {blocks?.length > 0 && (
             <Swiper
-              className="!static mt-10 w-full"
+              className={`!static mt-10 w-full`}
               grabCursor
               loop={blocks.length >= 2}
               pagination={{
@@ -63,19 +63,19 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
                 return (
                   <SwiperSlide key={index}>
                     <div
-                      className="mx-auto flex max-w-[18.75rem] flex-col items-center text-center lg:max-w-[15.625rem]"
+                      className={`mx-auto flex max-w-[18.75rem] flex-col items-center text-center lg:max-w-[15.625rem]`}
                       style={{
                         color: textColor,
                       }}
                     >
                       <ReviewStars rating={rating} color={reviewStarColor} />
 
-                      <h3 className="my-4 text-2xl">{item.title}</h3>
+                      <h3 className={`my-4 text-2xl`}>{item.title}</h3>
 
                       {item.body && <p>{item.body}</p>}
 
                       {item.author && (
-                        <p className="mt-4 text-base font-normal">
+                        <p className={`mt-4 text-base font-normal`}>
                           {item.author}
                         </p>
                       )}
@@ -86,7 +86,7 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
 
               <div
                 // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="swiper-pagination !static mt-6 lg:!hidden"
+                className={`swiper-pagination !static mt-6 lg:!hidden`}
               />
 
               <div
@@ -96,7 +96,7 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
                 }`}
               >
                 <Svg
-                  className="max-w-5 text-black"
+                  className={`max-w-5 text-black`}
                   src="/svgs/arrow-left.svg#arrow-left"
                   title="Arrow Left"
                   viewBox="0 0 24 24"
@@ -110,7 +110,7 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
                 }`}
               >
                 <Svg
-                  className="max-w-5 text-black"
+                  className={`max-w-5 text-black`}
                   src="/svgs/arrow-right.svg#arrow-right"
                   title="Arrow Right"
                   viewBox="0 0 24 24"
@@ -120,10 +120,10 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
           )}
 
           {link?.text && (
-            <div className="mt-10">
+            <div className={`mt-10`}>
               <Link
                 aria-label={link.text}
-                className="btn-primary"
+                className={`btn-primary`}
                 to={link.url}
                 newTab={link.newTab}
                 type={link.type}

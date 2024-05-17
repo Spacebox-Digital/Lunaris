@@ -31,12 +31,12 @@ export function Cart() {
       secondHeaderElement={
         <>
           <Svg
-            className="w-5 text-text"
+            className={`w-5 text-text`}
             src="/svgs/cart.svg#cart"
             title="Cart"
             viewBox="0 0 24 24"
           />
-          <p className="text-label-sm w-4 whitespace-nowrap pl-px font-bold">
+          <p className={`text-label-sm w-4 whitespace-nowrap pl-px font-bold`}>
             ({totalQuantity || 0})
           </p>
         </>
@@ -44,13 +44,13 @@ export function Cart() {
     >
       <FreeShippingMeter settings={cartSettings} />
 
-      <ul className="scrollbar-hide relative flex-1 overflow-y-auto">
+      <ul className={`scrollbar-hide relative flex-1 overflow-y-auto`}>
         {cartLines?.length ? (
           cartLines.map((line) => {
             return (
               <li
                 key={line.id}
-                className="border-b border-b-border last:border-none"
+                className={`border-b border-b-border last:border-none`}
               >
                 <CartLine line={line} closeCart={closeCart} />
               </li>

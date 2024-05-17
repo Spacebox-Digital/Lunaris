@@ -23,24 +23,26 @@ export function CollectionMobileFilters({
   return (
     <Drawer
       ariaName="cart drawer"
-      className="md:hidden"
+      className={`md:hidden`}
       heading="Filters"
       onClose={() => setMobileFiltersOpen(false)}
       open={mobileFiltersOpen}
       openFrom="right"
     >
-      <div className="sticky top-0 z-[1] border-b border-border bg-background p-4 pt-5">
-        <div className="mb-4 flex justify-between gap-2">
-          <h3 className="text-nav">
+      <div
+        className={`sticky top-0 z-[1] border-b border-border bg-background p-4 pt-5`}
+      >
+        <div className={`mb-4 flex justify-between gap-2`}>
+          <h3 className={`text-nav`}>
             Filters Summary{' '}
-            <span className="text-xs">
+            <span className={`text-xs`}>
               {totalFilters ? `(${totalFilters})` : ''}
             </span>
           </h3>
 
           {totalFilters > 0 && (
             <button
-              className="text-xs underline underline-offset-2"
+              className={`text-xs underline underline-offset-2`}
               onClick={clearFilters}
               type="button"
             >
@@ -49,18 +51,20 @@ export function CollectionMobileFilters({
           )}
         </div>
 
-        <div className="scrollbar-hide max-h-[4.5rem] min-h-8 overflow-y-auto">
+        <div
+          className={`scrollbar-hide max-h-[4.5rem] min-h-8 overflow-y-auto`}
+        >
           {totalFilters ? (
             <CollectionFiltersSummary hideClear />
           ) : (
-            <p className="text-sm leading-8 text-mediumDarkGray">
+            <p className={`text-sm leading-8 text-mediumDarkGray`}>
               No filters selected yet
             </p>
           )}
         </div>
       </div>
 
-      <ul className="scrollbar-hide relative flex-1 overflow-y-auto">
+      <ul className={`scrollbar-hide relative flex-1 overflow-y-auto`}>
         {filters.map((filter, index) => {
           if (!filter.values.length) return null;
 

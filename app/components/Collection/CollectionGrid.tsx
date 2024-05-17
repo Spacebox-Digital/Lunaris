@@ -28,7 +28,7 @@ export function CollectionGrid({
       {({nodes, isLoading, PreviousLink, NextLink}) => {
         const productNodes = nodes as Product[];
         return (
-          <div className="flex flex-col gap-4">
+          <div className={`flex flex-col gap-4`}>
             <PreviousLink
               className={`btn-pill relative self-center`}
               suppressHydrationWarning
@@ -104,7 +104,9 @@ export function CollectionGrid({
             </NextLink>
 
             {!products?.nodes?.length && activeFilterValues?.length > 0 && (
-              <div className="flex min-h-48 items-center justify-center text-center">
+              <div
+                className={`flex min-h-48 items-center justify-center text-center`}
+              >
                 <p>No products found matching these filters.</p>
               </div>
             )}

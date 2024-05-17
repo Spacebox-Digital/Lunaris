@@ -10,20 +10,20 @@ export function OrderItems({order}: {order: Order}) {
 
   return (
     <div>
-      <div className="grid grid-cols-[10fr_auto] gap-3 md:hidden">
+      <div className={`grid grid-cols-[10fr_auto] gap-3 md:hidden`}>
         {mobileHeaders.map((header) => {
           return (
-            <h6 key={header} className="text-label">
+            <h6 key={header} className={`text-label`}>
               {header}
             </h6>
           );
         })}
       </div>
 
-      <div className="hidden grid-cols-[6fr_2fr_1fr_1fr_1fr] gap-3 md:grid">
+      <div className={`hidden grid-cols-[6fr_2fr_1fr_1fr_1fr] gap-3 md:grid`}>
         {headers.map((header) => {
           return (
-            <h6 key={header} className="text-label">
+            <h6 key={header} className={`text-label`}>
               {header}
             </h6>
           );

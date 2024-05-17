@@ -40,7 +40,7 @@ export function Document({children, title}: DocumentProps) {
       <CartProvider cartFragment={CART_FRAGMENT}>
         <GlobalProvider>
           <GroupingsProvider>
-            <html lang="en" className="text-base-content">
+            <html lang="en" className={`text-base-content`}>
               <head>
                 {title && <title>{title}</title>}
                 <meta charSet="utf-8" />

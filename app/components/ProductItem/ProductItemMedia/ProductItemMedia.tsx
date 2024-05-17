@@ -30,7 +30,7 @@ export function ProductItemMedia({
 
   return (
     <div
-      className="group/media relative overflow-hidden bg-offWhite before:via-[black-100/10]"
+      className={`group/media relative overflow-hidden bg-offWhite before:via-[black-100/10]`}
       // for a static/consistent aspect ratio, delete style below and add 'aspect-[var(--product-image-aspect-ratio)]' to className
       // set var(--product-image-aspect-ratio) in styles/app.css
       style={{
@@ -64,7 +64,7 @@ export function ProductItemMedia({
                 ...primaryMedia.previewImage,
                 altText: selectedProduct?.title,
               }}
-              className="media-fill"
+              className={`media-fill`}
               loading="eager"
               sizes="(min-width: 768px) 30vw, 45vw"
             />
@@ -73,7 +73,9 @@ export function ProductItemMedia({
       )}
 
       {hoverMedia && (
-        <div className="hidden opacity-0 transition duration-300 md:block md:group-hover/media:opacity-100">
+        <div
+          className={`hidden opacity-0 transition duration-300 md:block md:group-hover/media:opacity-100`}
+        >
           {hoverMedia.mediaContentType === 'VIDEO' ? (
             <ProductItemVideo
               autoPlay={false}
@@ -86,7 +88,7 @@ export function ProductItemMedia({
                 ...hoverMedia.previewImage,
                 altText: selectedProduct?.title,
               }}
-              className="media-fill"
+              className={`media-fill`}
               sizes="(min-width: 768px) 30vw, 45vw"
             />
           )}
@@ -94,11 +96,13 @@ export function ProductItemMedia({
       )}
 
       {/* loading shimmer */}
-      {!primaryMedia && <div className="loading-shimmer opacity-60" />}
+      {!primaryMedia && <div className={`loading-shimmer opacity-60`} />}
 
-      <div className="pointer-events-none absolute left-0 top-0 z-[1] p-2.5 xs:p-3 xl:p-4">
+      <div
+        className={`pointer-events-none absolute left-0 top-0 z-[1] p-2.5 xs:p-3 xl:p-4`}
+      >
         <Badges
-          className="max-xl:text-label-sm gap-2 xs:gap-2 [&_div]:max-xl:px-1.5 [&_div]:max-xl:py-0.5"
+          className={`max-xl:text-label-sm gap-2 xs:gap-2 [&_div]:max-xl:px-1.5 [&_div]:max-xl:py-0.5`}
           tags={selectedProduct?.tags || []}
         />
       </div>

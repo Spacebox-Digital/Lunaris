@@ -26,11 +26,11 @@ export function Pagination({
   });
 
   return (
-    <ul className="flex gap-2">
+    <ul className={`flex gap-2`}>
       <li>
         <button
           aria-label="Go to previous page"
-          className="disabled:opacity-50"
+          className={`disabled:opacity-50`}
           disabled={currentPage === pages[0]}
           onClick={handlePrevClick}
           type="button"
@@ -74,7 +74,7 @@ export function Pagination({
       <li>
         <button
           aria-label="Go to previous page"
-          className="disabled:opacity-50"
+          className={`disabled:opacity-50`}
           disabled={currentPage === pages[pages.length - 1]}
           onClick={handleNextClick}
           type="button"

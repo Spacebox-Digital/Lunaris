@@ -26,7 +26,9 @@ export function CartLine({closeCart, line}: CartLineProps) {
   }, [merchandise.id]);
 
   return (
-    <div className="relative grid grid-cols-[auto_1fr] items-center gap-3 p-4 ">
+    <div
+      className={`relative grid grid-cols-[auto_1fr] items-center gap-3 p-4 `}
+    >
       <Link
         aria-label={`View ${merchandise.product.title}`}
         to={url}
@@ -45,27 +47,27 @@ export function CartLine({closeCart, line}: CartLineProps) {
           }
           width="88"
           isStatic
-          className="bg-offWhite"
+          className={`bg-offWhite`}
         />
       </Link>
 
-      <div className="flex min-h-[6.25em] flex-col justify-between gap-4">
-        <div className="relative pr-6">
+      <div className={`flex min-h-[6.25em] flex-col justify-between gap-4`}>
+        <div className={`relative pr-6`}>
           <Link
             aria-label={`View ${merchandise.product.title}`}
             to={url}
             onClick={closeCart}
           >
-            <h3 className="text-h6">{merchandise.product.title}</h3>
+            <h3 className={`text-h6`}>{merchandise.product.title}</h3>
           </Link>
 
           {merchandise.title !== 'Default Title' && (
-            <p className="text-sm text-mediumDarkGray">{merchandise.title}</p>
+            <p className={`text-sm text-mediumDarkGray`}>{merchandise.title}</p>
           )}
 
           <button
             aria-label={`Remove ${merchandise.product.title} from cart`}
-            className="absolute right-0 top-0 w-3"
+            className={`absolute right-0 top-0 w-3`}
             onClick={handleRemove}
             type="button"
           >
@@ -77,7 +79,7 @@ export function CartLine({closeCart, line}: CartLineProps) {
           </button>
         </div>
 
-        <div className="flex items-end justify-between gap-3">
+        <div className={`flex items-end justify-between gap-3`}>
           <QuantitySelector
             handleDecrement={handleDecrement}
             handleIncrement={handleIncrement}
@@ -86,23 +88,23 @@ export function CartLine({closeCart, line}: CartLineProps) {
             quantity={quantity}
           />
 
-          <div className="flex flex-1 flex-col items-end pb-1">
+          <div className={`flex flex-1 flex-col items-end pb-1`}>
             {/* Applicable cart line discounts */}
             {discountAllocations?.length > 0 &&
               discountAllocations.map(
                 (discount: {title?: string; code?: string}, index) => {
                   if (!discount.title && !discount.code) return null;
                   return (
-                    <div key={index} className="flex items-start gap-1">
+                    <div key={index} className={`flex items-start gap-1`}>
                       {discount.code && (
                         <Svg
-                          className="w-3.5 pt-0.5"
+                          className={`w-3.5 pt-0.5`}
                           src="/svgs/discount.svg#discount"
                           title="Close"
                           viewBox="0 0 24 24"
                         />
                       )}
-                      <p className="flex-1 pb-1 text-xs text-mediumDarkGray">
+                      <p className={`flex-1 pb-1 text-xs text-mediumDarkGray`}>
                         {discount.title || discount.code}
                       </p>
                     </div>
@@ -110,9 +112,9 @@ export function CartLine({closeCart, line}: CartLineProps) {
                 },
               )}
 
-            <div className="flex flex-wrap justify-end gap-x-2">
+            <div className={`flex flex-wrap justify-end gap-x-2`}>
               {compareAtPrice && (
-                <p className="text-mediumDarkGray line-through">
+                <p className={`text-mediumDarkGray line-through`}>
                   {compareAtPrice}
                 </p>
               )}

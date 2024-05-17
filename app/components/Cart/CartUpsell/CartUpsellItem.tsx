@@ -58,17 +58,17 @@ export function CartUpsellItem({
         />
       </Link>
 
-      <div className="flex max-w-[25rem] flex-1 flex-col gap-2">
+      <div className={`flex max-w-[25rem] flex-1 flex-col gap-2`}>
         <Link
           aria-label={fullProduct?.title}
-          className="self-start"
+          className={`self-start`}
           to={url}
           onClick={closeCart}
         >
-          <h4 className="text-xs font-bold">{fullProduct?.title}</h4>
+          <h4 className={`text-xs font-bold`}>{fullProduct?.title}</h4>
         </Link>
 
-        <div className="flex items-center justify-between gap-4">
+        <div className={`flex items-center justify-between gap-4`}>
           <button
             aria-label={buttonText}
             className={`text-label-sm text-main-underline ${isUpdatingClass}`}
@@ -85,7 +85,7 @@ export function CartUpsellItem({
             type="button"
           >
             {isAdding ? (
-              <div className="flex h-4 items-center justify-center px-6">
+              <div className={`flex h-4 items-center justify-center px-6`}>
                 <Spinner width="12" color="gray" />
               </div>
             ) : (
@@ -93,13 +93,13 @@ export function CartUpsellItem({
             )}
           </button>
 
-          <div className="flex flex-1 flex-wrap justify-end gap-x-1">
+          <div className={`flex flex-1 flex-wrap justify-end gap-x-1`}>
             {compareAtPrice && (
-              <p className="text-xs text-mediumDarkGray line-through">
+              <p className={`text-xs text-mediumDarkGray line-through`}>
                 {compareAtPrice}
               </p>
             )}
-            <p className="text-xs">{price}</p>
+            <p className={`text-xs`}>{price}</p>
           </div>
         </div>
       </div>

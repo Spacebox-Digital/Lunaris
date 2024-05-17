@@ -23,11 +23,11 @@ export function Order() {
   }, [order?.processedAt]);
 
   return (
-    <div className="flex flex-col gap-10">
-      <div className="flex items-start justify-between gap-4">
+    <div className={`flex flex-col gap-10`}>
+      <div className={`flex items-start justify-between gap-4`}>
         <Link
           aria-label="Go back to order history page"
-          className="mt-1 w-5 md:mt-1 lg:mt-1.5"
+          className={`mt-1 w-5 md:mt-1 lg:mt-1.5`}
           to="/account/orders"
         >
           <Svg
@@ -37,16 +37,20 @@ export function Order() {
           />
         </Link>
 
-        <div className="flex flex-1 flex-col items-start gap-x-4 gap-y-1 md:flex-row md:items-center md:justify-between">
-          <h1 className="text-h4 md:text-h5 lg:text-h4">Order {order?.name}</h1>
+        <div
+          className={`flex flex-1 flex-col items-start gap-x-4 gap-y-1 md:flex-row md:items-center md:justify-between`}
+        >
+          <h1 className={`text-h4 md:text-h5 lg:text-h4`}>
+            Order {order?.name}
+          </h1>
 
-          <p className="text-sm md:text-right">{orderDate}</p>
+          <p className={`text-sm md:text-right`}>{orderDate}</p>
         </div>
       </div>
 
       {!order && (
         <div
-          className="relative flex min-h-48 items-center justify-center"
+          className={`relative flex min-h-48 items-center justify-center`}
           role="status"
         >
           Order not found.

@@ -57,11 +57,11 @@ export function Drawer({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-[rgba(0,0,0,0.3)]" />
+          <div className={`fixed inset-0 bg-[rgba(0,0,0,0.3)]`} />
         </Transition.Child>
 
-        <div className="fixed inset-0">
-          <div className="absolute inset-0 overflow-hidden">
+        <div className={`fixed inset-0`}>
+          <div className={`absolute inset-0 overflow-hidden`}>
             <div
               className={`fixed inset-y-0 flex max-w-full ${
                 openFrom === 'right' ? 'right-0' : ''
@@ -78,18 +78,20 @@ export function Drawer({
               >
                 <Dialog.Panel
                   as="aside"
-                  className="flex h-[var(--viewport-height)] w-screen flex-col justify-between overflow-hidden bg-background align-middle shadow-xl transition-all md:max-w-[var(--drawer-width)]"
+                  className={`flex h-[var(--viewport-height)] w-screen flex-col justify-between overflow-hidden bg-background align-middle shadow-xl transition-all md:max-w-[var(--drawer-width)]`}
                 >
                   {/* Drawer header */}
-                  <header className="relative flex items-center justify-center border-b border-b-border px-16 max-md:h-[var(--header-height-mobile)] md:h-[var(--header-height-desktop)]">
+                  <header
+                    className={`relative flex items-center justify-center border-b border-b-border px-16 max-md:h-[var(--header-height-mobile)] md:h-[var(--header-height-desktop)]`}
+                  >
                     <button
                       aria-label={`Close ${ariaName}`}
-                      className="absolute left-4 top-1/2 -translate-y-1/2"
+                      className={`absolute left-4 top-1/2 -translate-y-1/2`}
                       onClick={onClose}
                       type="button"
                     >
                       <Svg
-                        className="w-5"
+                        className={`w-5`}
                         src="/svgs/close.svg#close"
                         title="Close"
                         viewBox="0 0 24 24"
@@ -97,13 +99,15 @@ export function Drawer({
                     </button>
 
                     {typeof heading === 'string' ? (
-                      <h3 className="text-center text-lg">{heading}</h3>
+                      <h3 className={`text-center text-lg`}>{heading}</h3>
                     ) : (
                       heading
                     )}
 
                     {secondHeaderElement && (
-                      <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center">
+                      <div
+                        className={`absolute right-4 top-1/2 flex -translate-y-1/2 items-center`}
+                      >
                         {secondHeaderElement}
                       </div>
                     )}

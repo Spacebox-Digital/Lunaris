@@ -86,18 +86,18 @@ export function Promobar() {
       {enabled && messages?.length ? (
         <Swiper
           {...swiperParams}
-          className="swiper-wrapper-center relative flex h-full items-center"
+          className={`swiper-wrapper-center relative flex h-full items-center`}
         >
           {messages.map(({message, link}, index) => {
             return (
-              <SwiperSlide key={index} className="px-4">
+              <SwiperSlide key={index} className={`px-4`}>
                 <div
-                  className="px-contained flex min-h-full items-center justify-center text-center text-xs tracking-[0.04em] sm:text-sm"
+                  className={`px-contained flex min-h-full items-center justify-center text-center text-xs tracking-[0.04em] sm:text-sm`}
                   style={{color}}
                 >
                   <Link
                     aria-label={message}
-                    className="select-none"
+                    className={`select-none`}
                     draggable={false}
                     to={link.url}
                     onClick={closeAll}
@@ -116,14 +116,14 @@ export function Promobar() {
               <button
                 aria-label="See previous slide"
                 // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="swiper-button-prev !left-4 md:!left-8 xl:!left-12"
+                className={`swiper-button-prev !left-4 md:!left-8 xl:!left-12`}
                 type="button"
               />
 
               <button
                 aria-label="See next slide"
                 // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="swiper-button-next !right-4 md:!right-8 xl:!right-12"
+                className={`swiper-button-next !right-4 md:!right-8 xl:!right-12`}
                 type="button"
               />
             </>

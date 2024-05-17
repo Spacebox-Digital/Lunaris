@@ -49,7 +49,7 @@ export function ColorVariantSelector({
   }, [initialProduct?.id, hasMultipleColors]);
 
   return hasMultipleColors && selectedVariant ? (
-    <div className="mt-3.5">
+    <div className={`mt-3.5`}>
       <ColorVariantOptions
         enabledColorNameOnHover={enabledColorNameOnHover}
         grouping={grouping}

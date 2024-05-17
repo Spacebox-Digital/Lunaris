@@ -39,8 +39,8 @@ export function ProductsSlider({
         !isFullBleedAndCentered ? 'lg:px-contained' : ''
       }`}
     >
-      <div className="m-auto flex flex-col items-center">
-        <h2 className="text-h2 px-4 text-center" style={{color: textColor}}>
+      <div className={`m-auto flex flex-col items-center`}>
+        <h2 className={`text-h2 px-4 text-center`} style={{color: textColor}}>
           {heading}
         </h2>
 
@@ -113,7 +113,9 @@ export function ProductsSlider({
 
             {/* Navigation */}
             {products.length > slidesPerViewDesktop && (
-              <div className="absolute inset-x-0 top-[calc(50%-28px)] z-[1] md:px-8 xl:px-14">
+              <div
+                className={`absolute inset-x-0 top-[calc(50%-28px)] z-[1] md:px-8 xl:px-14`}
+              >
                 <div
                   className={`relative mx-auto ${maxWidthClass} ${
                     isFullBleedAndCentered ? 'min-[90rem]:max-w-full' : ''
@@ -126,7 +128,7 @@ export function ProductsSlider({
                     }`}
                   >
                     <Svg
-                      className="max-w-5 text-black"
+                      className={`max-w-5 text-black`}
                       src="/svgs/arrow-left.svg#arrow-left"
                       title="Arrow Left"
                       viewBox="0 0 24 24"
@@ -140,7 +142,7 @@ export function ProductsSlider({
                     }`}
                   >
                     <Svg
-                      className="max-w-5 text-black"
+                      className={`max-w-5 text-black`}
                       src="/svgs/arrow-right.svg#arrow-right"
                       title="Arrow Right"
                       viewBox="0 0 24 24"
@@ -153,14 +155,14 @@ export function ProductsSlider({
         )}
 
         {(!swiper || !products?.length) && (
-          <div className="flex min-h-80 items-center justify-center">
+          <div className={`flex min-h-80 items-center justify-center`}>
             <Spinner width="32" />
           </div>
         )}
 
         {/* Footer button */}
         {button?.text && (
-          <div className="mt-10">
+          <div className={`mt-10`}>
             <Link
               aria-label={button.text}
               className={`${section?.buttonStyle || 'btn-primary'}`}

@@ -32,7 +32,7 @@ export function ProductOptionValues({
   return (
     <div>
       {hasSubgroups && (
-        <div className="flex flex-col gap-2">
+        <div className={`flex flex-col gap-2`}>
           {option?.groups?.map((group, index) => {
             if (!group.values.length) return null;
 
@@ -46,7 +46,7 @@ export function ProductOptionValues({
                   selectedValue={groupHasSelectedColor ? selectedColor : null}
                 />
 
-                <ul className="flex flex-wrap gap-2">
+                <ul className={`flex flex-wrap gap-2`}>
                   {group.values.map((value) => {
                     return (
                       <li key={value}>
@@ -74,7 +74,7 @@ export function ProductOptionValues({
             selectedValue={selectedOptionsMap?.[name]}
           />
 
-          <ul className="flex flex-wrap gap-2">
+          <ul className={`flex flex-wrap gap-2`}>
             {values?.map((value) => {
               return (
                 <li key={value}>

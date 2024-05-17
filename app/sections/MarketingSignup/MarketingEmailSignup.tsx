@@ -23,16 +23,16 @@ export function MarketingEmailSignup({
 
   return (
     <form
-      className=" mx-auto w-full max-w-[38rem] text-center"
+      className={` mx-auto w-full max-w-[38rem] text-center`}
       onSubmit={handleSubmit}
       ref={formRef}
     >
-      {heading && <h3 className="text-h4 text-current">{heading}</h3>}
+      {heading && <h3 className={`text-h4 text-current`}>{heading}</h3>}
 
-      {subtext && <p className="mt-2 text-base">{subtext}</p>}
+      {subtext && <p className={`mt-2 text-base`}>{subtext}</p>}
 
       <input
-        className="input-text mt-6 text-text"
+        className={`input-text mt-6 text-text`}
         name="email"
         placeholder={placeholder}
         required
@@ -41,7 +41,7 @@ export function MarketingEmailSignup({
 
       <button
         aria-label={buttonText}
-        className="btn-primary mt-3 w-full"
+        className={`btn-primary mt-3 w-full`}
         disabled={!listId}
         type="submit"
       >
@@ -54,9 +54,9 @@ export function MarketingEmailSignup({
         )}
       </button>
 
-      <div className="pointer-events-none mt-6 min-h-6">
+      <div className={`pointer-events-none mt-6 min-h-6`}>
         {message && (
-          <p className="pointer-events-auto text-base">
+          <p className={`pointer-events-auto text-base`}>
             {submitted ? thankYouText : message}
           </p>
         )}

@@ -31,38 +31,46 @@ export function OrdersItem({order}: {order: Order}) {
   return (
     <>
       {/* mobile */}
-      <div className="flex flex-col gap-3 rounded border border-border p-6 md:hidden">
-        <div className="flex justify-between">
+      <div
+        className={`flex flex-col gap-3 rounded border border-border p-6 md:hidden`}
+      >
+        <div className={`flex justify-between`}>
           <Link
             aria-label={`Go to order page for order ${order.name}`}
             to={orderUrl}
           >
-            <p className="text-main-underline text-nav bg-[linear-gradient(var(--primary),var(--primary))] text-right font-normal">
+            <p
+              className={`text-main-underline text-nav bg-[linear-gradient(var(--primary),var(--primary))] text-right font-normal`}
+            >
               Order {order.name}
             </p>
           </Link>
 
-          <p className="text-sm">{orderDate}</p>
+          <p className={`text-sm`}>{orderDate}</p>
         </div>
 
-        <p className="text-h4">{total}</p>
+        <p className={`text-h4`}>{total}</p>
 
-        <p className="text-xs">{products}</p>
+        <p className={`text-xs`}>{products}</p>
 
-        <p className="text-xs">
-          Payment: <span className="font-medium">{financialStatus}</span> /
-          Fufillment: <span className="font-medium">{fulfillmentStatus}</span>
+        <p className={`text-xs`}>
+          Payment: <span className={`font-medium`}>{financialStatus}</span> /
+          Fufillment: <span className={`font-medium`}>{fulfillmentStatus}</span>
         </p>
       </div>
 
       {/* tablet/desktop */}
-      <div className="hidden grid-cols-[2fr_2fr_2fr_2fr_1fr] gap-3 text-sm md:grid">
+      <div
+        className={`hidden grid-cols-[2fr_2fr_2fr_2fr_1fr] gap-3 text-sm md:grid`}
+      >
         <div>
           <Link
             aria-label={`Go to order page for order ${order.name}`}
             to={orderUrl}
           >
-            <p className="text-main-underline text-nav bg-[linear-gradient(var(--primary),var(--primary))] font-normal">
+            <p
+              className={`text-main-underline text-nav bg-[linear-gradient(var(--primary),var(--primary))] font-normal`}
+            >
               {order.name}
             </p>
           </Link>

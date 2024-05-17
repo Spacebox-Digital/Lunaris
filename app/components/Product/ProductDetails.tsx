@@ -40,12 +40,12 @@ export function ProductDetails({
   }, [enabledQuantitySelector]);
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className={`flex flex-col gap-5`}>
       {!hideOptions && (
         <ProductOptions product={product} selectedVariant={selectedVariant} />
       )}
 
-      <div className="flex items-center gap-4">
+      <div className={`flex items-center gap-4`}>
         {enabledQuantitySelector && (
           <QuantitySelector
             disableDecrement={quantity === 1}
@@ -56,7 +56,7 @@ export function ProductDetails({
           />
         )}
 
-        <div className="flex-1">
+        <div className={`flex-1`}>
           <AddToCart
             isPdp
             quantity={quantity}
@@ -67,7 +67,7 @@ export function ProductDetails({
 
       <div
         dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
-        className="text-sm [&>:last-child]:mb-0 [&_a]:underline [&_blockquote]:pl-8 [&_h1]:mb-3 [&_h2]:mb-3 [&_h3]:mb-3 [&_h4]:mb-3 [&_h5]:mb-3 [&_h6]:mb-3 [&_li>p]:mb-0 [&_li]:mb-2 [&_ol>li]:list-decimal [&_ol]:mb-3 [&_ol]:pl-8 [&_p]:mb-3 [&_ul>li]:list-disc [&_ul]:mb-3 [&_ul]:pl-8"
+        className={`text-sm [&>:last-child]:mb-0 [&_a]:underline [&_blockquote]:pl-8 [&_h1]:mb-3 [&_h2]:mb-3 [&_h3]:mb-3 [&_h4]:mb-3 [&_h5]:mb-3 [&_h6]:mb-3 [&_li>p]:mb-0 [&_li]:mb-2 [&_ol>li]:list-decimal [&_ol]:mb-3 [&_ol]:pl-8 [&_p]:mb-3 [&_ul>li]:list-disc [&_ul]:mb-3 [&_ul]:pl-8`}
       />
     </div>
   );

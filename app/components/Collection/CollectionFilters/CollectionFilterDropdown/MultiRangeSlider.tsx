@@ -80,8 +80,10 @@ export const MultiRangeSlider = ({
   const hasChanges = minVal !== minValue || maxVal !== maxValue;
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative flex h-10 w-full items-center justify-center pb-4">
+    <div className={`flex flex-col items-center`}>
+      <div
+        className={`relative flex h-10 w-full items-center justify-center pb-4`}
+      >
         <input
           id="multirange-slider-min"
           type="range"
@@ -98,7 +100,7 @@ export const MultiRangeSlider = ({
             minVal > max - 100 ? 'z-[5]' : ''
           }`}
         />
-        <label htmlFor="multirange-slider-min" className="sr-only">
+        <label htmlFor="multirange-slider-min" className={`sr-only`}>
           Min
         </label>
         <input
@@ -113,19 +115,23 @@ export const MultiRangeSlider = ({
             setMaxVal(value);
             e.target.value = value.toString();
           }}
-          className="range-thumb z-[4] w-full"
+          className={`range-thumb z-[4] w-full`}
         />
-        <label htmlFor="multirange-slider-max" className="sr-only">
+        <label htmlFor="multirange-slider-max" className={`sr-only`}>
           Max
         </label>
 
-        <div className="relative w-full">
-          <div className="absolute z-[1] h-1 w-full rounded-[3px] bg-lightGray"></div>
+        <div className={`relative w-full`}>
+          <div
+            className={`absolute z-[1] h-1 w-full rounded-[3px] bg-lightGray`}
+          ></div>
           <div
             ref={range}
-            className="absolute z-[2] h-1 rounded-[3px] bg-black"
+            className={`absolute z-[2] h-1 rounded-[3px] bg-black`}
           ></div>
-          <div className="absolute left-0 mt-5 flex w-full justify-between text-sm text-text">
+          <div
+            className={`absolute left-0 mt-5 flex w-full justify-between text-sm text-text`}
+          >
             <p>
               {isPrice ? currencySymbol : ''}
               {minVal}
@@ -139,7 +145,7 @@ export const MultiRangeSlider = ({
       </div>
 
       {withSubmit && (
-        <div className="flex gap-2">
+        <div className={`flex gap-2`}>
           <button
             type="button"
             aria-label={`Set min and max values to ${minVal} and ${maxVal}`}

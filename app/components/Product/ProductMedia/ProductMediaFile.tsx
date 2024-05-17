@@ -40,7 +40,7 @@ export function ProductMediaFile({
 
   return (
     <div
-      className="relative bg-offWhite"
+      className={`relative bg-offWhite`}
       ref={ref}
       style={{
         aspectRatio:
@@ -63,7 +63,7 @@ export function ProductMediaFile({
           {mediaContentType === 'EXTERNAL_VIDEO' && (
             <MediaFile
               data={{...media, __typename} as MediaFileData}
-              className="media-fill"
+              className={`media-fill`}
               onLoad={onLoad}
             />
           )}
@@ -71,7 +71,7 @@ export function ProductMediaFile({
           {mediaContentType === 'MODEL_3D' && (
             <MediaFile
               data={{...media, __typename} as MediaFileData}
-              className="media-fill"
+              className={`media-fill`}
               onLoad={onLoad}
             />
           )}

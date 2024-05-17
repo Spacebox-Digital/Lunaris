@@ -14,22 +14,22 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
   const buttonText = 'Create Account';
 
   return (
-    <div className="rounded border border-border px-3 py-6 md:px-6 md:py-10">
+    <div className={`rounded border border-border px-3 py-6 md:px-6 md:py-10`}>
       {pathname.startsWith(`${pathPrefix}/account/register`) && !pageHeading ? (
-        <h1 className="text-h3 mb-6 text-center">{heading}</h1>
+        <h1 className={`text-h3 mb-6 text-center`}>{heading}</h1>
       ) : (
-        <h2 className="text-h3 mb-6 text-center">{heading}</h2>
+        <h2 className={`text-h3 mb-6 text-center`}>{heading}</h2>
       )}
 
       <form
-        className="mx-auto flex w-full max-w-[25rem] flex-col gap-4"
+        className={`mx-auto flex w-full max-w-[25rem] flex-col gap-4`}
         id="customer-create-form"
         onSubmit={customerRegister}
       >
         <label htmlFor="firstName">
-          <span className="input-label">First Name</span>
+          <span className={`input-label`}>First Name</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="firstName"
             placeholder="First Name"
             required
@@ -38,9 +38,9 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
         </label>
 
         <label htmlFor="lastName">
-          <span className="input-label">Last Name</span>
+          <span className={`input-label`}>Last Name</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="lastName"
             placeholder="Last Name"
             required
@@ -49,9 +49,9 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
         </label>
 
         <label htmlFor="email">
-          <span className="input-label">Email</span>
+          <span className={`input-label`}>Email</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="email"
             placeholder="email@email.com"
             required
@@ -60,9 +60,9 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
         </label>
 
         <label htmlFor="password">
-          <span className="input-label">Password</span>
+          <span className={`input-label`}>Password</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="password"
             placeholder="••••••••"
             required
@@ -71,9 +71,9 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
         </label>
 
         <label htmlFor="passwordConfirm">
-          <span className="input-label">Confirm Password</span>
+          <span className={`input-label`}>Confirm Password</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="passwordConfirm"
             placeholder="••••••••"
             required
@@ -93,7 +93,9 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
           </span>
 
           {status.started && (
-            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <span
+              className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}
+            >
               <LoadingDots color="white" />
             </span>
           )}
@@ -101,10 +103,10 @@ export function RegisterForm({settings}: {settings: Settings['account']}) {
       </form>
 
       {errors?.length > 0 && (
-        <ul className="mt-4 flex flex-col items-center gap-1">
+        <ul className={`mt-4 flex flex-col items-center gap-1`}>
           {errors.map((error, index) => {
             return (
-              <li key={index} className="text-center text-sm text-red-500">
+              <li key={index} className={`text-center text-sm text-red-500`}>
                 {error}
               </li>
             );

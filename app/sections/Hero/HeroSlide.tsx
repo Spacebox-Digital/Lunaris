@@ -27,8 +27,8 @@ export function HeroSlide({
   }, [isActiveSlide]);
 
   return (
-    <div className="relative size-full">
-      <div className="relative size-full overflow-hidden md:hidden">
+    <div className={`relative size-full`}>
+      <div className={`relative size-full overflow-hidden md:hidden`}>
         {video?.srcMobile && (
           <HeroVideo
             isVisible={isVisible}
@@ -50,7 +50,7 @@ export function HeroSlide({
         )}
       </div>
 
-      <div className="relative hidden size-full overflow-hidden md:block">
+      <div className={`relative hidden size-full overflow-hidden md:block`}>
         {video?.srcDesktop && (
           <HeroVideo
             isVisible={isVisible}

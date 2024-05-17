@@ -19,19 +19,19 @@ export function ImageTiles({cms}: {cms: ImageTilesCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="lg:px-contained py-4 md:py-6">
+      <div className={`lg:px-contained py-4 md:py-6`}>
         <div className={`mx-auto ${maxWidthClass}`}>
           {(!!heading || !!subheading) && (
-            <div className="mb-6 px-4 text-center">
-              {heading && <h2 className="text-h2">{heading}</h2>}
-              {subheading && <h4 className="text-h4 mt-2">{subheading}</h4>}
+            <div className={`mb-6 px-4 text-center`}>
+              {heading && <h2 className={`text-h2`}>{heading}</h2>}
+              {subheading && <h4 className={`text-h4 mt-2`}>{subheading}</h4>}
             </div>
           )}
 
           {tiles?.length > 0 && (
             <>
               {/* mobile/tablet */}
-              <div className="relative lg:hidden">
+              <div className={`relative lg:hidden`}>
                 <Swiper
                   grabCursor
                   onSwiper={setSwiper}
@@ -63,7 +63,9 @@ export function ImageTiles({cms}: {cms: ImageTilesCms}) {
                 </Swiper>
 
                 {!swiper && (
-                  <div className="flex min-h-[25rem] items-center justify-center">
+                  <div
+                    className={`flex min-h-[25rem] items-center justify-center`}
+                  >
                     <Spinner width="32" />
                   </div>
                 )}
@@ -77,7 +79,7 @@ export function ImageTiles({cms}: {cms: ImageTilesCms}) {
               >
                 {tiles.slice(0, 3).map((tile, index) => {
                   return (
-                    <div className="relative" key={index}>
+                    <div className={`relative`} key={index}>
                       <ImageTile
                         aspectRatio={section?.aspectRatio}
                         content={content}

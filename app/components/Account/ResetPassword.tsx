@@ -23,22 +23,26 @@ export function ResetPassword() {
   }, [status.success]);
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="mx-auto flex w-full max-w-md flex-col items-center rounded border border-border px-3 py-6 md:px-6 md:py-10">
-        <div className="mb-6 flex flex-col gap-4">
-          <h1 className="text-h3 text-center">{heading}</h1>
+    <div className={`flex flex-col items-center`}>
+      <div
+        className={`mx-auto flex w-full max-w-md flex-col items-center rounded border border-border px-3 py-6 md:px-6 md:py-10`}
+      >
+        <div className={`mb-6 flex flex-col gap-4`}>
+          <h1 className={`text-h3 text-center`}>{heading}</h1>
 
-          {subtext && <p className="max-w-xs text-center text-sm">{subtext}</p>}
+          {subtext && (
+            <p className={`max-w-xs text-center text-sm`}>{subtext}</p>
+          )}
         </div>
 
         <form
-          className="mx-auto flex w-full max-w-[25rem] flex-col gap-4"
+          className={`mx-auto flex w-full max-w-[25rem] flex-col gap-4`}
           onSubmit={resetPassword}
         >
           <label htmlFor="password">
-            <span className="text-h6 block pb-1 pl-5">Password</span>
+            <span className={`text-h6 block pb-1 pl-5`}>Password</span>
             <input
-              className="input-text"
+              className={`input-text`}
               name="password"
               placeholder="••••••••"
               required
@@ -47,9 +51,9 @@ export function ResetPassword() {
           </label>
 
           <label htmlFor="passwordConfirm">
-            <span className="text-h6 block pb-1 pl-5">Confirm Password</span>
+            <span className={`text-h6 block pb-1 pl-5`}>Confirm Password</span>
             <input
-              className="input-text"
+              className={`input-text`}
               name="passwordConfirm"
               placeholder="••••••••"
               required
@@ -70,17 +74,17 @@ export function ResetPassword() {
 
         <Link
           aria-label="Go back to login page"
-          className="text-underline mt-4 text-center text-sm font-bold"
+          className={`text-underline mt-4 text-center text-sm font-bold`}
           to="/account/login"
         >
           Cancel
         </Link>
 
         {errors?.length > 0 && (
-          <ul className="mt-4 flex flex-col items-center gap-1">
+          <ul className={`mt-4 flex flex-col items-center gap-1`}>
             {errors.map((error, index) => {
               return (
-                <li key={index} className="text-center text-sm text-red-500">
+                <li key={index} className={`text-center text-sm text-red-500`}>
                   {error}
                 </li>
               );

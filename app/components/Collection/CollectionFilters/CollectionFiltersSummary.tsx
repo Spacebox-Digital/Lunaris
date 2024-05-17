@@ -36,25 +36,27 @@ export function CollectionFiltersSummary({className = '', hideClear = false}) {
         if (!name || typeof name !== 'string') return null;
 
         return (
-          <li key={index} className="max-w-full">
+          <li key={index} className={`max-w-full`}>
             <button
-              className="flex max-w-full items-center rounded-full bg-offWhite py-2 pl-2.5 pr-3 text-xs transition md:hover:bg-lightGray"
+              className={`flex max-w-full items-center rounded-full bg-offWhite py-2 pl-2.5 pr-3 text-xs transition md:hover:bg-lightGray`}
               onClick={() => {
                 removeFilter(id);
               }}
               type="button"
             >
-              <div className="flex-1 truncate">
+              <div className={`flex-1 truncate`}>
                 {filterLabel && (
                   <>
-                    <span className="font-bold">{startCase(filterLabel)}:</span>{' '}
+                    <span className={`font-bold`}>
+                      {startCase(filterLabel)}:
+                    </span>{' '}
                   </>
                 )}
                 {name}
               </div>
 
               <Svg
-                className="ml-1 w-2.5 text-text"
+                className={`ml-1 w-2.5 text-text`}
                 src="/svgs/close.svg#close"
                 title="Close"
                 viewBox="0 0 24 24"
@@ -65,9 +67,9 @@ export function CollectionFiltersSummary({className = '', hideClear = false}) {
       })}
 
       {!hideClear && (
-        <li className="pl-1">
+        <li className={`pl-1`}>
           <button
-            className="text-xs underline underline-offset-2"
+            className={`text-xs underline underline-offset-2`}
             onClick={clearFilters}
             type="button"
           >

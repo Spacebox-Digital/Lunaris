@@ -61,7 +61,7 @@ export function QuickShopOption({
       type="button"
     >
       {isAdding ? (
-        <div className="text-mediumDarkGray md:group-hover/option:text-white">
+        <div className={`text-mediumDarkGray md:group-hover/option:text-white`}>
           <Spinner width="20" />
         </div>
       ) : (

@@ -57,20 +57,22 @@ export default function ArticleRoute() {
   }, [atDate]);
 
   return (
-    <div className="py-contained" data-comp={ArticleRoute.displayName}>
+    <div className={`py-contained`} data-comp={ArticleRoute.displayName}>
       <section
-        className="px-contained mb-8 flex flex-col items-center gap-3 text-center md:mb-10"
+        className={`px-contained mb-8 flex flex-col items-center gap-3 text-center md:mb-10`}
         data-comp="article-header"
       >
-        <p className="text-sm md:text-base">
+        <p className={`text-sm md:text-base`}>
           {article.author ? `${article.author} | ` : ''}
           {date}
         </p>
 
-        <h1 className="text-h2 max-w-[60rem]">{article.title}</h1>
+        <h1 className={`text-h2 max-w-[60rem]`}>{article.title}</h1>
 
         {article.category && (
-          <p className="btn-text flex h-8 items-center justify-center rounded-full bg-lightGray px-4 text-text">
+          <p
+            className={`btn-text flex h-8 items-center justify-center rounded-full bg-lightGray px-4 text-text`}
+          >
             {article.category}
           </p>
         )}

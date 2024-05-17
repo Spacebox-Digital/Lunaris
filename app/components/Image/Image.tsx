@@ -72,7 +72,9 @@ export const Image = forwardRef(
           width: isPxWidth ? `${width}px` : width || '100%',
         }}
       >
-        {withLoadingAnimation && <div className="loading-shimmer opacity-60" />}
+        {withLoadingAnimation && (
+          <div className={`loading-shimmer opacity-60`} />
+        )}
       </div>
     );
   },

@@ -28,7 +28,7 @@ export function ProductImage({
           : PRODUCT_IMAGE_ASPECT_RATIO
       }
       onLoad={onLoad}
-      className="media-fill"
+      className={`media-fill`}
       loading={priority ? 'eager' : 'lazy'}
       sizes="(min-width: 1440px) 900px, (min-width: 768px) 50vw, 100vw"
     />

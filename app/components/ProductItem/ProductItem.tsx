@@ -113,11 +113,14 @@ export function ProductItem({
   }, [index, selectedProduct?.id, selectedVariant?.id]);
 
   return (
-    <div className="group flex h-full flex-col justify-between" ref={inViewRef}>
-      <div className="flex flex-col items-start">
+    <div
+      className={`group flex h-full flex-col justify-between`}
+      ref={inViewRef}
+    >
+      <div className={`flex flex-col items-start`}>
         <Link
           aria-label={title}
-          className="mb-3 w-full"
+          className={`mb-3 w-full`}
           to={productUrl}
           onClick={handleClick}
           tabIndex={-1}
@@ -130,7 +133,7 @@ export function ProductItem({
         </Link>
 
         {enabledStarRating && initialProduct?.id && (
-          <div className="mb-1.5">
+          <div className={`mb-1.5`}>
             <Link
               aria-label={`Reviews for ${title}`}
               to={productUrl}
@@ -143,10 +146,10 @@ export function ProductItem({
         )}
 
         <Link aria-label={title} to={productUrl} onClick={handleClick}>
-          <h3 className="text-bold min-h-6 text-base">{title}</h3>
+          <h3 className={`text-bold min-h-6 text-base`}>{title}</h3>
         </Link>
 
-        {color && <p className="text-sm text-mediumDarkGray">{color}</p>}
+        {color && <p className={`text-sm text-mediumDarkGray`}>{color}</p>}
 
         <ProductItemPrice selectedVariant={selectedVariant} />
 

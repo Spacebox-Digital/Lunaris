@@ -68,12 +68,12 @@ export function FreeShippingMeter({settings}: FreeShippingMeterProps) {
   ]);
 
   return showMeter ? (
-    <div className="border-b border-b-border p-4">
-      <p className="mb-2 text-center text-xs">{progress.message}</p>
+    <div className={`border-b border-b-border p-4`}>
+      <p className={`mb-2 text-center text-xs`}>{progress.message}</p>
 
-      <div className="h-1.5 w-full overflow-hidden rounded bg-lightGray">
+      <div className={`h-1.5 w-full overflow-hidden rounded bg-lightGray`}>
         <div
-          className="size-full origin-left transition"
+          className={`size-full origin-left transition`}
           style={{
             transform: `scaleX(${progress.percent}%)`,
             backgroundColor: progressBarColor,

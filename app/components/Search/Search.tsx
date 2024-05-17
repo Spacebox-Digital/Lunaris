@@ -55,10 +55,10 @@ export function Search() {
       )}
 
       {productResults.length > 0 && (
-        <div className="border-t border-t-border p-4">
+        <div className={`border-t border-t-border p-4`}>
           <Link
             aria-label="See all search results"
-            className="btn-primary w-full"
+            className={`btn-primary w-full`}
             to={searchPageUrl}
             onClick={closeSearch}
           >

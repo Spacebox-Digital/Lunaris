@@ -64,10 +64,10 @@ export function CartDiscounts() {
   }, [discountCodesDep]);
 
   return (
-    <div className="flex flex-col gap-2 border-t border-t-border p-4">
+    <div className={`flex flex-col gap-2 border-t border-t-border p-4`}>
       <form
         ref={formRef}
-        className="flex items-center justify-between overflow-hidden rounded border border-border"
+        className={`flex items-center justify-between overflow-hidden rounded border border-border`}
         onSubmit={handleUpdateCode}
       >
         <input
@@ -75,46 +75,46 @@ export function CartDiscounts() {
           name="code"
           placeholder="Discount code"
           id="cart-discount-code"
-          className="flex-1 rounded p-2"
+          className={`flex-1 rounded p-2`}
         />
-        <label htmlFor="cart-discount-code" className="sr-only">
+        <label htmlFor="cart-discount-code" className={`sr-only`}>
           Discount code
         </label>
         <button
           type="submit"
-          className="h-full border-l border-border px-2 text-sm transition md:hover:bg-offWhite"
+          className={`h-full border-l border-border px-2 text-sm transition md:hover:bg-offWhite`}
         >
           Apply
         </button>
       </form>
 
       {message && (
-        <div className="text-xs text-red-500" role="alert">
+        <div className={`text-xs text-red-500`} role="alert">
           {message}
         </div>
       )}
 
       {codes.length > 0 && (
-        <ul className="flex flex-wrap gap-2">
+        <ul className={`flex flex-wrap gap-2`}>
           {codes.map((code) => {
             return (
               <li key={code}>
                 <button
-                  className="flex max-w-full items-center gap-1 rounded-full bg-offWhite py-2 pl-2.5 pr-3 text-xs uppercase transition md:hover:bg-lightGray"
+                  className={`flex max-w-full items-center gap-1 rounded-full bg-offWhite py-2 pl-2.5 pr-3 text-xs uppercase transition md:hover:bg-lightGray`}
                   onClick={() => handleClearCode(code)}
                   type="button"
                 >
                   <Svg
-                    className="w-3"
+                    className={`w-3`}
                     src="/svgs/discount.svg#discount"
                     title="Discount"
                     viewBox="0 0 24 24"
                   />
 
-                  <div className="flex-1 truncate">{code}</div>
+                  <div className={`flex-1 truncate`}>{code}</div>
 
                   <Svg
-                    className="w-2.5 text-text"
+                    className={`w-2.5 text-text`}
                     src="/svgs/close.svg#close"
                     title="Close"
                     viewBox="0 0 24 24"

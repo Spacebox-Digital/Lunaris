@@ -15,10 +15,12 @@ export function Login() {
   const [isForgotPassword, setIsForgotPassword] = useState(false);
 
   return (
-    <div className="flex flex-col items-center">
-      {pageHeading && <h1 className="text-h2 mb-6">{pageHeading}</h1>}
+    <div className={`flex flex-col items-center`}>
+      {pageHeading && <h1 className={`text-h2 mb-6`}>{pageHeading}</h1>}
 
-      <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-5 md:max-w-screen-lg md:grid-cols-2">
+      <div
+        className={`mx-auto grid w-full max-w-md grid-cols-1 gap-5 md:max-w-screen-lg md:grid-cols-2`}
+      >
         <div>
           {isForgotPassword ? (
             <ForgotPasswordForm
@@ -33,16 +35,16 @@ export function Login() {
           )}
         </div>
 
-        <div className="hidden md:block">
+        <div className={`hidden md:block`}>
           <RegisterForm settings={account} />
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap justify-center gap-x-1.5 md:hidden">
+      <div className={`mt-6 flex flex-wrap justify-center gap-x-1.5 md:hidden`}>
         <p>{createText}</p>
         <Link
           aria-label="Create account"
-          className="text-underline font-bold"
+          className={`text-underline font-bold`}
           to="/account/register"
         >
           {createLinkText}

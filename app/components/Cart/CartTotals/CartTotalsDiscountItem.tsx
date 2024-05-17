@@ -23,11 +23,11 @@ export function CartTotalsDiscountItem({
   const title = (discount as CartAutomaticDiscountAllocation).title;
 
   return formattedDiscount ? (
-    <div className="flex justify-between text-sm text-mediumDarkGray">
-      <div className="flex items-center gap-1">
+    <div className={`flex justify-between text-sm text-mediumDarkGray`}>
+      <div className={`flex items-center gap-1`}>
         {code && (
           <Svg
-            className="w-4"
+            className={`w-4`}
             src="/svgs/discount.svg#discount"
             title="Close"
             viewBox="0 0 24 24"

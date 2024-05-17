@@ -84,13 +84,13 @@ export function AddressForm({
   }, [initialAddress, defaultAddress?.id]);
 
   return (
-    <div className="rounded border border-border p-4 sm:p-8">
-      <div className="mb-8 flex items-start justify-between gap-3">
-        <h2 className="text-h5">{title}</h2>
+    <div className={`rounded border border-border p-4 sm:p-8`}>
+      <div className={`mb-8 flex items-start justify-between gap-3`}>
+        <h2 className={`text-h5`}>{title}</h2>
 
         <button
           aria-label="Cancel"
-          className="text-nav text-main-underline font-normal"
+          className={`text-nav text-main-underline font-normal`}
           onClick={closeForm}
           type="button"
         >
@@ -99,14 +99,14 @@ export function AddressForm({
       </div>
 
       <form
-        className="grid grid-cols-2 gap-3"
+        className={`grid grid-cols-2 gap-3`}
         onSubmit={onSubmit}
         ref={formRef}
       >
-        <label htmlFor="firstName" className="col-span-2 sm:col-span-1">
-          <span className="input-label">First Name</span>
+        <label htmlFor="firstName" className={`col-span-2 sm:col-span-1`}>
+          <span className={`input-label`}>First Name</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="firstName"
             placeholder="First Name"
             required
@@ -114,10 +114,10 @@ export function AddressForm({
           />
         </label>
 
-        <label htmlFor="lastName" className="col-span-2 sm:col-span-1">
-          <span className="input-label">Last Name</span>
+        <label htmlFor="lastName" className={`col-span-2 sm:col-span-1`}>
+          <span className={`input-label`}>Last Name</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="lastName"
             placeholder="Last Name"
             required
@@ -125,20 +125,20 @@ export function AddressForm({
           />
         </label>
 
-        <label htmlFor="company" className="col-span-2">
-          <span className="input-label">Company</span>
+        <label htmlFor="company" className={`col-span-2`}>
+          <span className={`input-label`}>Company</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="company"
             placeholder="Company"
             type="text"
           />
         </label>
 
-        <label htmlFor="address1" className="col-span-2">
-          <span className="input-label">Address 1</span>
+        <label htmlFor="address1" className={`col-span-2`}>
+          <span className={`input-label`}>Address 1</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="address1"
             placeholder="Address 1"
             required
@@ -146,20 +146,20 @@ export function AddressForm({
           />
         </label>
 
-        <label htmlFor="address2" className="col-span-2">
-          <span className="input-label">Address 2</span>
+        <label htmlFor="address2" className={`col-span-2`}>
+          <span className={`input-label`}>Address 2</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="address2"
             placeholder="Address 2"
             type="text"
           />
         </label>
 
-        <label htmlFor="city" className="col-span-2 sm:col-span-1">
-          <span className="input-label">City</span>
+        <label htmlFor="city" className={`col-span-2 sm:col-span-1`}>
+          <span className={`input-label`}>City</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="city"
             placeholder="City"
             required
@@ -167,8 +167,8 @@ export function AddressForm({
           />
         </label>
 
-        <div className="z-[11] col-span-2 sm:col-span-1">
-          <p className="input-label">State/Province</p>
+        <div className={`z-[11] col-span-2 sm:col-span-1`}>
+          <p className={`input-label`}>State/Province</p>
 
           <Select
             name="province"
@@ -182,10 +182,10 @@ export function AddressForm({
           />
         </div>
 
-        <label htmlFor="zip" className="col-span-2 sm:col-span-1">
-          <span className="input-label">Zip</span>
+        <label htmlFor="zip" className={`col-span-2 sm:col-span-1`}>
+          <span className={`input-label`}>Zip</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="zip"
             placeholder="Zip"
             required
@@ -193,8 +193,8 @@ export function AddressForm({
           />
         </label>
 
-        <div className="col-span-2 sm:col-span-1">
-          <p className="input-label">Country</p>
+        <div className={`col-span-2 sm:col-span-1`}>
+          <p className={`input-label`}>Country</p>
 
           <Select
             name="country"
@@ -208,10 +208,10 @@ export function AddressForm({
           />
         </div>
 
-        <label htmlFor="phone" className="col-span-2 sm:col-span-1">
-          <span className="input-label">Phone</span>
+        <label htmlFor="phone" className={`col-span-2 sm:col-span-1`}>
+          <span className={`input-label`}>Phone</span>
           <input
-            className="input-text"
+            className={`input-text`}
             name="phone"
             placeholder="Phone"
             type="tel"
@@ -220,15 +220,15 @@ export function AddressForm({
 
         <label
           htmlFor="isDefault"
-          className="col-span-2 mt-2 flex items-center"
+          className={`col-span-2 mt-2 flex items-center`}
         >
           <input
             checked={isDefault}
-            className="cursor-pointer"
+            className={`cursor-pointer`}
             onChange={(e) => setIsDefault(e.target.checked)}
             type="checkbox"
           />
-          <span className="ml-2 text-sm">Set as default address</span>
+          <span className={`ml-2 text-sm`}>Set as default address</span>
         </label>
 
         <input type="hidden" name="isDefault" value={`${isDefault}`} />
@@ -237,7 +237,7 @@ export function AddressForm({
           <input type="hidden" name="id" value={initialAddress.id} />
         )}
 
-        <div className="col-span-2 mt-4 flex justify-center">
+        <div className={`col-span-2 mt-4 flex justify-center`}>
           <button
             aria-label={initialAddress ? 'Update Address' : 'Add Address'}
             className={`btn-primary w-full min-w-48 md:w-auto ${
@@ -250,10 +250,10 @@ export function AddressForm({
         </div>
 
         {errors?.length > 0 && (
-          <ul className="col-span-2 mt-4 flex flex-col items-center gap-1">
+          <ul className={`col-span-2 mt-4 flex flex-col items-center gap-1`}>
             {errors.map((error, index) => {
               return (
-                <li key={index} className="text-center text-sm text-red-500">
+                <li key={index} className={`text-center text-sm text-red-500`}>
                   {error}
                 </li>
               );

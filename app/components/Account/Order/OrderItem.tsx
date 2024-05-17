@@ -28,8 +28,10 @@ export function OrderItem({item}: {item: OrderLineItem}) {
   }, [discountedTotalPrice, originalTotalPrice, quantity]);
 
   return (
-    <div className="grid grid-cols-[10fr_auto] items-center gap-3 border-b border-b-border py-4 text-sm md:grid-cols-[6fr_2fr_1fr_1fr_1fr]">
-      <div className="grid grid-cols-[3rem_1fr] items-center gap-4">
+    <div
+      className={`grid grid-cols-[10fr_auto] items-center gap-3 border-b border-b-border py-4 text-sm md:grid-cols-[6fr_2fr_1fr_1fr_1fr]`}
+    >
+      <div className={`grid grid-cols-[3rem_1fr] items-center gap-4`}>
         {/* mobile/desktop product image */}
         <Image
           data={{
@@ -45,32 +47,32 @@ export function OrderItem({item}: {item: OrderLineItem}) {
           isStatic
         />
 
-        <div className="flex flex-1 flex-col items-start gap-2">
+        <div className={`flex flex-1 flex-col items-start gap-2`}>
           {/* mobile/desktop product title */}
           {variant?.product ? (
             <Link
               aria-label={variant.product.title}
               to={`/products/${variant.product.handle}`}
             >
-              <p className="break-words font-semibold">
+              <p className={`break-words font-semibold`}>
                 {variant.product.title}
               </p>
             </Link>
           ) : (
-            <p className="break-words font-semibold">{item.title}</p>
+            <p className={`break-words font-semibold`}>{item.title}</p>
           )}
 
           {/* mobile variant title */}
           {variant?.title !== 'Default Title' && (
-            <p className="text-xss md:hidden">{variant?.title}</p>
+            <p className={`text-xss md:hidden`}>{variant?.title}</p>
           )}
 
           {/* mobile price per qty and quantity */}
-          <div className="flex gap-1 text-xs md:hidden">
+          <div className={`flex gap-1 text-xs md:hidden`}>
             {discountedPrice && (
               <Money
                 as="p"
-                className="text-mediumDarkGray line-through"
+                className={`text-mediumDarkGray line-through`}
                 data={discountedPrice}
               />
             )}
@@ -81,16 +83,16 @@ export function OrderItem({item}: {item: OrderLineItem}) {
       </div>
 
       {/* desktop variant title */}
-      <p className="hidden md:block">
+      <p className={`hidden md:block`}>
         {variant?.title !== 'Default Title' ? '' : variant?.title}
       </p>
 
       {/* desktop price per qty */}
-      <div className="hidden md:block">
+      <div className={`hidden md:block`}>
         {discountedPrice && (
           <Money
             as="p"
-            className="text-mediumDarkGray line-through"
+            className={`text-mediumDarkGray line-through`}
             data={discountedPrice}
           />
         )}
@@ -98,14 +100,14 @@ export function OrderItem({item}: {item: OrderLineItem}) {
       </div>
 
       {/* desktop quantity */}
-      <p className="hidden md:block">{quantity}</p>
+      <p className={`hidden md:block`}>{quantity}</p>
 
       {/* mobile/desktop total price */}
       <div>
         {discountedPrice && (
           <Money
             as="p"
-            className="text-mediumDarkGray line-through"
+            className={`text-mediumDarkGray line-through`}
             data={discountedTotalPrice}
           />
         )}

@@ -20,25 +20,25 @@ export function MarketingPhoneSignup({
 
   return (
     <form
-      className=" mx-auto w-full max-w-[38rem]"
+      className={` mx-auto w-full max-w-[38rem]`}
       onSubmit={handleSubmit}
       ref={formRef}
     >
       {heading && (
-        <h3 className="text-h4 text-center text-current">{heading}</h3>
+        <h3 className={`text-h4 text-center text-current`}>{heading}</h3>
       )}
 
-      {subtext && <p className="mt-2 text-center text-base">{subtext}</p>}
+      {subtext && <p className={`mt-2 text-center text-base`}>{subtext}</p>}
 
       <input
-        className="input-text mt-6 text-text"
+        className={`input-text mt-6 text-text`}
         name="phone"
         placeholder={placeholder}
         required
         type="tel"
       />
 
-      <div className="mt-3 flex gap-2 align-top">
+      <div className={`mt-3 flex gap-2 align-top`}>
         <div>
           <input
             id="smsConsent"
@@ -46,19 +46,19 @@ export function MarketingPhoneSignup({
             required
             type="checkbox"
             value="yes"
-            className="cursor-pointer"
+            className={`cursor-pointer`}
           />
           <input type="hidden" name="smsConsent" value="no" />
         </div>
 
-        <label className="pt-0.5 text-xs" htmlFor="smsConsent">
+        <label className={`pt-0.5 text-xs`} htmlFor="smsConsent">
           {smsConsentText}
           {smsConsentLinks?.map(({link}, index) => {
             return (
               <Fragment key={index}>
                 {` `}
                 <Link
-                  className="underline"
+                  className={`underline`}
                   to={link?.url}
                   newTab={link?.newTab}
                   type={link?.type}
@@ -74,7 +74,7 @@ export function MarketingPhoneSignup({
 
       <button
         aria-label={buttonText}
-        className="btn-primary mt-3 w-full"
+        className={`btn-primary mt-3 w-full`}
         disabled={!listId}
         type="submit"
       >
@@ -87,9 +87,9 @@ export function MarketingPhoneSignup({
         )}
       </button>
 
-      <div className="pointer-events-none mt-6 min-h-6">
+      <div className={`pointer-events-none mt-6 min-h-6`}>
         {message && (
-          <p className="pointer-events-auto text-base">
+          <p className={`pointer-events-auto text-base`}>
             {submitted ? thankYouText : message}
           </p>
         )}

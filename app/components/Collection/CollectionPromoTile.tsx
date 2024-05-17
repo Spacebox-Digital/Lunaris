@@ -19,7 +19,7 @@ export function CollectionPromoTile({tile}: CollectionPromoTileProps) {
   return (
     <Link
       aria-label={text?.heading || link?.text}
-      className="h-full"
+      className={`h-full`}
       to={link?.url}
       newTab={link?.newTab}
       ref={ref}
@@ -34,7 +34,7 @@ export function CollectionPromoTile({tile}: CollectionPromoTileProps) {
         {videoSrc && (
           <video
             autoPlay
-            className="absolute inset-0 size-full object-cover"
+            className={`absolute inset-0 size-full object-cover`}
             controls={false}
             loop
             muted
@@ -54,24 +54,26 @@ export function CollectionPromoTile({tile}: CollectionPromoTileProps) {
               height: image.height,
             }}
             aspectRatio={getAspectRatioFromClass(aspectRatio)}
-            className="media-fill"
+            className={`media-fill`}
             sizes="(min-width: 768px) 33vw, 50vw"
           />
         )}
 
         {(videoSrc || image?.src) && darkOverlay && (
-          <div className="pointer-events-none absolute inset-0 size-full bg-[rgba(0,0,0,0.2)]" />
+          <div
+            className={`pointer-events-none absolute inset-0 size-full bg-[rgba(0,0,0,0.2)]`}
+          />
         )}
 
         {(text?.heading || text?.subtext) && (
           <div
-            className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4 text-center"
+            className={`absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4 text-center`}
             style={{color: text?.textColor}}
           >
-            <h3 className="text-xl lg:text-2xl">{text?.heading}</h3>
+            <h3 className={`text-xl lg:text-2xl`}>{text?.heading}</h3>
 
             {text?.subtext && (
-              <p className="mt-4 text-sm lg:text-base">{text?.subtext}</p>
+              <p className={`mt-4 text-sm lg:text-base`}>{text?.subtext}</p>
             )}
           </div>
         )}

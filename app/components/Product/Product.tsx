@@ -57,8 +57,10 @@ export function Product({product}: ProductProps) {
 
   return (
     <section data-comp="product">
-      <div className="md:px-contained py-6 md:py-10 lg:py-12">
-        <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-y-5 md:grid-cols-2 md:grid-rows-[auto_1fr] md:gap-y-4">
+      <div className={`md:px-contained py-6 md:py-10 lg:py-12`}>
+        <div
+          className={`mx-auto grid max-w-screen-xl grid-cols-1 gap-y-5 md:grid-cols-2 md:grid-rows-[auto_1fr] md:gap-y-4`}
+        >
           {/* mobile header placement */}
           {/* note: remove this component if mobile header shares same placement as desktop */}
           <ProductHeader
@@ -79,7 +81,7 @@ export function Product({product}: ProductProps) {
             </div>
           </div>
 
-          <div className="max-md:px-4 md:pl-4 lg:pl-10 xl:pl-16">
+          <div className={`max-md:px-4 md:pl-4 lg:pl-10 xl:pl-16`}>
             <div
               className={`flex flex-col gap-y-4 md:sticky ${stickyTopClass}`}
             >

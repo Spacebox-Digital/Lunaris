@@ -25,18 +25,18 @@ export function EmailSignup({settings}: {settings: Settings['footer']}) {
 
   return enabled ? (
     <form
-      className="border-b border-b-gray px-4 py-8 md:border-none md:p-0"
+      className={`border-b border-b-gray px-4 py-8 md:border-none md:p-0`}
       onSubmit={handleSubmit}
       ref={formRef}
     >
-      <h3 className="text-nav text-current">{heading}</h3>
+      <h3 className={`text-nav text-current`}>{heading}</h3>
 
       {subtext && (
-        <p className="mt-2 text-base text-current md:text-sm">{subtext}</p>
+        <p className={`mt-2 text-base text-current md:text-sm`}>{subtext}</p>
       )}
 
       <input
-        className="input-text mt-6 text-text"
+        className={`input-text mt-6 text-text`}
         name="email"
         placeholder={placeholder}
         required
@@ -45,7 +45,7 @@ export function EmailSignup({settings}: {settings: Settings['footer']}) {
 
       <button
         aria-label={buttonText}
-        className="btn-primary mt-3 w-full"
+        className={`btn-primary mt-3 w-full`}
         type="submit"
       >
         {!isSubmitting && buttonText}
@@ -57,9 +57,9 @@ export function EmailSignup({settings}: {settings: Settings['footer']}) {
         )}
       </button>
 
-      <div className="pointer-events-none mt-3 min-h-5">
+      <div className={`pointer-events-none mt-3 min-h-5`}>
         {message && (
-          <p className="pointer-events-auto text-sm">
+          <p className={`pointer-events-auto text-sm`}>
             {submitted ? thankYouText : message}
           </p>
         )}

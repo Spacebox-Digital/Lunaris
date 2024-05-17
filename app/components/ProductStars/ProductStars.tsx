@@ -42,12 +42,14 @@ export function ProductStars({id}: {id: string}) {
   }, [fetcher.data]);
 
   return (
-    <div className="flex min-h-4 flex-wrap items-center gap-1">
+    <div className={`flex min-h-4 flex-wrap items-center gap-1`}>
       {reviewAggregate && (
         <>
           <ReviewStars rating={reviewAggregate.rating} size="small" />
 
-          <p className="text-2xs text-mediumDarkGray underline underline-offset-[3px]">
+          <p
+            className={`text-2xs text-mediumDarkGray underline underline-offset-[3px]`}
+          >
             ({reviewAggregate.count} Reviews)
           </p>
         </>

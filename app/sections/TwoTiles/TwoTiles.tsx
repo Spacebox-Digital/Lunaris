@@ -13,13 +13,13 @@ export function TwoTiles({cms}: {cms: TwoTilesCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="px-contained py-contained">
+      <div className={`px-contained py-contained`}>
         <div
           className={`${maxWidthClass} mx-auto grid gap-5 md:grid-cols-2 lg:gap-x-8`}
         >
           {tiles?.slice(0, 2).map((item, index) => {
             return (
-              <div key={index} className="flex w-full flex-col gap-4">
+              <div key={index} className={`flex w-full flex-col gap-4`}>
                 <Link
                   aria-label={item.heading}
                   to={item.link?.url}
@@ -40,17 +40,19 @@ export function TwoTiles({cms}: {cms: TwoTilesCms}) {
                   />
                 </Link>
 
-                <div className="flex flex-col items-start">
+                <div className={`flex flex-col items-start`}>
                   <Link
                     aria-label={item.heading}
                     to={item.link?.url}
                     newTab={item.link?.newTab}
                     type={item.link?.type}
                   >
-                    <div className="group flex">
-                      <h3 className="text-2xl lg:text-3xl">{item.heading}</h3>
+                    <div className={`group flex`}>
+                      <h3 className={`text-2xl lg:text-3xl`}>{item.heading}</h3>
 
-                      <span className="ml-3 block max-w-5 transition-transform lg:w-6 lg:group-hover:translate-x-2">
+                      <span
+                        className={`ml-3 block max-w-5 transition-transform lg:w-6 lg:group-hover:translate-x-2`}
+                      >
                         <Svg
                           src="/svgs/arrow-right.svg#arrow-right"
                           title="Arrow"
@@ -61,7 +63,7 @@ export function TwoTiles({cms}: {cms: TwoTilesCms}) {
                   </Link>
 
                   {item.description && (
-                    <p className="mt-1 text-base">{item.description}</p>
+                    <p className={`mt-1 text-base`}>{item.description}</p>
                   )}
                 </div>
               </div>

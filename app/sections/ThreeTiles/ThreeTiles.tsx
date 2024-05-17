@@ -13,10 +13,10 @@ export function ThreeTiles({cms}: {cms: ThreeTilesCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className="lg:px-contained py-contained">
+      <div className={`lg:px-contained py-contained`}>
         {heading && (
           <h2
-            className="text-h2 mb-6 px-4 text-center md:mb-10"
+            className={`text-h2 mb-6 px-4 text-center md:mb-10`}
             style={{color: textColor}}
           >
             {heading}
@@ -31,7 +31,7 @@ export function ThreeTiles({cms}: {cms: ThreeTilesCms}) {
         />
 
         {button?.text && (
-          <div className="mt-10 flex flex-col items-center">
+          <div className={`mt-10 flex flex-col items-center`}>
             <Link
               aria-label={button.text}
               className={`${section?.buttonStyle || 'btn-primary'}`}

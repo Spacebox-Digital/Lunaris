@@ -118,8 +118,8 @@ export async function loader({request, context}: LoaderFunctionArgs) {
           search.totalCount === 1 ? 'result' : 'results'
         } for "${searchTerm}"`
       : filters.length
-      ? `Found 0 filtered results for "${searchTerm}"`
-      : `Found no results for "${searchTerm}"`,
+        ? `Found 0 filtered results for "${searchTerm}"`
+        : `Found no results for "${searchTerm}"`,
     handle: 'search',
     descriptionHtml: 'Search results',
     description: 'Search results',
@@ -160,7 +160,7 @@ export default function SearchRoute() {
     useLoaderData<typeof loader>();
 
   return (
-    <section data-comp="search-page" className="[&_h1]:text-h3">
+    <section data-comp="search-page" className={`[&_h1]:text-h3`}>
       <Collection
         activeFilterValues={activeFilterValues as ActiveFilterValue[]}
         collection={collection}

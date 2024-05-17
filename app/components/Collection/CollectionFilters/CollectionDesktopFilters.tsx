@@ -38,15 +38,19 @@ export function CollectionDesktopFilters({
         desktopFiltersOpen ? 'max-md:hidden md:flex' : 'hidden'
       } ${sticky ? stickyTopClass : ''}`}
     >
-      <div className="overflow-hidden rounded border border-border max-md:hidden">
-        <div className="max-h-[calc(var(--viewport-height)-var(--header-height-desktop)-100px)] overflow-y-auto overflow-x-hidden">
+      <div
+        className={`overflow-hidden rounded border border-border max-md:hidden`}
+      >
+        <div
+          className={`max-h-[calc(var(--viewport-height)-var(--header-height-desktop)-100px)] overflow-y-auto overflow-x-hidden`}
+        >
           {!!filters.length && (
-            <ul className="overflow-y-auto">
+            <ul className={`overflow-y-auto`}>
               {filters.map((filter, index) => {
                 if (!filter.values.length) return null;
 
                 return (
-                  <li className="[&>div]:last:border-b-0" key={index}>
+                  <li className={`[&>div]:last:border-b-0`} key={index}>
                     {mounted && (
                       <CollectionFilterDropdown
                         activeFilterValues={activeFilterValues}
@@ -66,7 +70,7 @@ export function CollectionDesktopFilters({
         </div>
       </div>
 
-      <CollectionFiltersSummary className="max-md:hidden" />
+      <CollectionFiltersSummary className={`max-md:hidden`} />
     </div>
   );
 }

@@ -9,10 +9,12 @@ export function PressSliderThumb({
   onClick,
 }: PressSliderThumbProps) {
   return (
-    <div className="relative mx-auto flex w-full max-w-32 justify-center pb-5">
+    <div
+      className={`relative mx-auto flex w-full max-w-32 justify-center pb-5`}
+    >
       <button
         aria-label={alt}
-        className="relative w-full overflow-hidden"
+        className={`relative w-full overflow-hidden`}
         onClick={onClick}
         style={{aspectRatio: image?.aspectRatio}}
         type="button"

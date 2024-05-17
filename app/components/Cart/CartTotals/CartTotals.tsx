@@ -90,12 +90,12 @@ export function CartTotals({settings}: CartTotalsProps) {
         totalQuantity ? 'flex' : 'hidden'
       }`}
     >
-      <div className="flex flex-col gap-1">
+      <div className={`flex flex-col gap-1`}>
         {isDiscounted && (
           <>
             {subtotalAmount !== totalAmount && (
-              <div className="flex justify-between">
-                <p className="font-bold">Subtotal</p>
+              <div className={`flex justify-between`}>
+                <p className={`font-bold`}>Subtotal</p>
                 <p>{subtotalAmount}</p>
               </div>
             )}
@@ -109,16 +109,16 @@ export function CartTotals({settings}: CartTotalsProps) {
           </>
         )}
 
-        <div className="flex justify-between">
-          <p className="font-bold">Total</p>
+        <div className={`flex justify-between`}>
+          <p className={`font-bold`}>Total</p>
           <p>{totalAmount}</p>
         </div>
 
-        {subtext && <p className="text-xs">{subtext}</p>}
+        {subtext && <p className={`text-xs`}>{subtext}</p>}
       </div>
 
       <MultipassCheckoutButton
-        className="btn-primary w-full"
+        className={`btn-primary w-full`}
         checkoutUrl={checkoutUrl}
       >
         {checkoutText}

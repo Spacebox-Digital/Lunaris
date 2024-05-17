@@ -29,7 +29,7 @@ export function ProductVideo({inView, media, onLoad}: ProductVideoProps) {
       loop
       controls={false}
       poster={previewImage?.url}
-      className="media-fill"
+      className={`media-fill`}
     >
       {inView && sources?.length
         ? sources.map((source) => {

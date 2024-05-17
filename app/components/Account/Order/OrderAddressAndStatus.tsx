@@ -19,11 +19,11 @@ export function OrderAddressAndStatus({order}: {order: Order}) {
   const shippingUrl = order.successfulFulfillments?.[0]?.trackingInfo?.[0]?.url;
 
   return (
-    <div className="mt-5 flex flex-wrap gap-x-20 gap-y-8 md:mt-10 lg:gap-36">
+    <div className={`mt-5 flex flex-wrap gap-x-20 gap-y-8 md:mt-10 lg:gap-36`}>
       <div>
-        <h6 className="text-label mb-3">Shipping Address</h6>
+        <h6 className={`text-label mb-3`}>Shipping Address</h6>
 
-        <div className="flex flex-col gap-1.5 text-sm">
+        <div className={`flex flex-col gap-1.5 text-sm`}>
           <p>{name}</p>
           {company && <p>{company}</p>}
           <p>{address1}</p>
@@ -37,7 +37,9 @@ export function OrderAddressAndStatus({order}: {order: Order}) {
               to={shippingUrl}
               newTab
             >
-              <p className="text-label text-main-underline bg-[linear-gradient(var(--primary),var(--primary))]">
+              <p
+                className={`text-label text-main-underline bg-[linear-gradient(var(--primary),var(--primary))]`}
+              >
                 Track Shipping
               </p>
             </Link>
@@ -46,19 +48,22 @@ export function OrderAddressAndStatus({order}: {order: Order}) {
       </div>
 
       <div>
-        <h6 className="text-label mb-3">Status</h6>
+        <h6 className={`text-label mb-3`}>Status</h6>
 
-        <div className="flex flex-col gap-1.5 text-sm">
+        <div className={`flex flex-col gap-1.5 text-sm`}>
           <p>
-            Payment: <span className="font-bold">{financialStatus}</span>
+            Payment: <span className={`font-bold`}>{financialStatus}</span>
           </p>
 
           <p>
-            Fulfillment: <span className="font-bold">{fulfillmentStatus}</span>
+            Fulfillment:{' '}
+            <span className={`font-bold`}>{fulfillmentStatus}</span>
           </p>
 
           <Link aria-label="Go to order tracking page" to={statusUrl} newTab>
-            <p className="text-label text-main-underline bg-[linear-gradient(var(--primary),var(--primary))]">
+            <p
+              className={`text-label text-main-underline bg-[linear-gradient(var(--primary),var(--primary))]`}
+            >
               Track Order
             </p>
           </Link>

@@ -49,11 +49,13 @@ export function QuickShop({
   const hasOneVariant = selectedProduct?.variants?.nodes?.length === 1;
 
   return qualifiesForQuickShop && selectedVariant ? (
-    <div className="mt-5 hidden opacity-0 transition md:block md:group-hover:opacity-100 lg:mt-6">
+    <div
+      className={`mt-5 hidden opacity-0 transition md:block md:group-hover:opacity-100 lg:mt-6`}
+    >
       {hasOneVariant && (
         <AddToCart
           addToCartText={quickShopSingleText}
-          className="btn-inverse-dark"
+          className={`btn-inverse-dark`}
           selectedVariant={selectedVariant}
         />
       )}
