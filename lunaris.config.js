@@ -44,11 +44,11 @@ export const lunaris = {
     ui: {
       // ===CONTAINERS===
       // border radius rounded-box utility class, used in card and other large boxes
-      roundedBox: '',
+      roundedBox: '1rem',
 
       // ===BUTTONS===
       // border radius rounded-btn utility class, used in buttons and similar element
-      roundedBtn: '',
+      roundedBtn: '0.5rem',
       // duration of animation when you click on button
       animationBtn: '0.25s',
       // scale transform of button when you focus on it
@@ -73,17 +73,17 @@ export const lunaris = {
 
       // ===TOGGLE===
       // background color of toggle
-      tglbg: '',
+      tglbg: tailwindColors.gray[200],
 
       // ===TOOLTIPS===
       // background color of tooltip
-      tooltipColor: '',
+      tooltipColor: tailwindColors.gray[800],
       // text color of tooltip
-      tooltipTextColor: '',
+      tooltipTextColor: tailwindColors.gray[100],
 
       // ===GLASS===
       // blur value of glass effect
-      glassBlur: '',
+      glassBlur: '5px',
       // opacity of glass effect
       glassOpacity: '25%',
       // opacity of glass border

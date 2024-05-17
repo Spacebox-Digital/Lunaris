@@ -96,5 +96,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [require('daisyui'), require('@tailwindcss/typography')],
+  // moves the daisyUI plugin to the end of the list as per the Dasiy UI docs here:
+  // https://daisyui.com/docs/layout-and-typography/
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
 };
