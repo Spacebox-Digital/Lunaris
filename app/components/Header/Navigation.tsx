@@ -48,10 +48,10 @@ export function Navigation({
       <div className={`order-2 flex items-center ${logoOrderClassDesktop}`}>
         <Link aria-label="Go to homepage" to="/">
           <Svg
-            className={`h-10 text-text`}
+            className={`w-32 text-text`}
             src="/svgs/logo.svg#logo"
             title="Storefront logo"
-            viewBox="0 0 31 35"
+            viewBox="0 0 1265.32 308.05"
           />
         </Link>
       </div>
@@ -176,7 +176,7 @@ export function Navigation({
             />
           </button>
 
-          <p className={`text-label-sm w-4 whitespace-nowrap pl-px font-bold`}>
+          <p className={`text-label-sm whitespace-nowrap font-bold`}>
             ({totalQuantity || 0})
           </p>
         </div>

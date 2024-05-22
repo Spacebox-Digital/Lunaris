@@ -59,7 +59,7 @@ export function HeroContent({
 
   return (
     <div
-      className={`absolute inset-0 flex size-full p-4 md:p-8 xl:p-12 ${positionClasses} ${darkOverlayClass} ${
+      className={`absolute inset-0 flex size-full ${positionClasses} ${darkOverlayClass} ${
         isActiveSlide ? 'pointer-events-auto' : 'pointer-events-none'
       }`}
     >

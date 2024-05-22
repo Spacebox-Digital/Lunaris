@@ -14,11 +14,7 @@ export function Layout({children}: {children: ReactNode}) {
     >
       <Header />
 
-      <main
-        role="main"
-        id="mainContent"
-        className={`grow ${mainPaddingTopClass}`}
-      >
+      <main role="main" id="mainContent" className={`grow`}>
         {children}
       </main>
 

@@ -30,7 +30,7 @@ export function PressSlider({cms}: {cms: PressSliderCms}) {
         }}
       >
         {slides?.length > 0 && (
-          <div className={`mx-auto pt-4 ${maxWidthContainerClass}`}>
+          <div className={`mx-auto ${maxWidthContainerClass}`}>
             <Swiper
               autoplay={{
                 delay: 8000,

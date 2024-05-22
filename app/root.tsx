@@ -70,10 +70,6 @@ export const links: LinksFunction = () => {
       rel: 'preconnect',
       href: 'https://fonts.gstatic.com',
     },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap',
-    },
   ];
 };
 

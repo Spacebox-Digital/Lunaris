@@ -58,31 +58,31 @@ export function HeroContainer({children, cms}: HeroContainerProps) {
   return (
     <div className={`${fullBleedClass}`}>
       {(usesDesktopNativeAspectRatio || usesMobileNativeAspectRatio) && (
-        <style>
-          {`.${nativeAspectRatiosClass}{
-                ${
-                  usesMobileNativeAspectRatio
-                    ? `@media (max-width: 767px) {
-                        aspect-ratio: ${
-                          mobileNativeAspectRatio ||
-                          FALLBACK_MOBILE_ASPECT_RATIO
-                        };
-                      }`
-                    : ''
-                }
-                ${
-                  usesDesktopNativeAspectRatio
-                    ? `@media (min-width: 768px) {
-                        aspect-ratio: ${
-                          desktopNativeAspectRatio ||
-                          FALLBACK_DESKTOP_ASPECT_RATIO
-                        };
-                      }`
-                    : ''
-                }
-              }
-            `}
-        </style>
+        // <style>
+        //   {`.${nativeAspectRatiosClass}{
+        //         ${
+        //           usesMobileNativeAspectRatio
+        //             ? `@media (max-width: 767px) {
+        //                 aspect-ratio: ${
+        //                   mobileNativeAspectRatio ||
+        //                   FALLBACK_MOBILE_ASPECT_RATIO
+        //                 };
+        //               }`
+        //             : ''
+        //         }
+        //         ${
+        //           usesDesktopNativeAspectRatio
+        //             ? `@media (min-width: 768px) {
+        //                 aspect-ratio: ${
+        //                   desktopNativeAspectRatio ||
+        //                   FALLBACK_DESKTOP_ASPECT_RATIO
+        //                 };
+        //               }`
+        //             : ''
+        //         }
+        //       }
+        //     `}
+        // </style>
       )}
 
       <div

@@ -29,7 +29,7 @@ export function DesktopMenu({
     >
       {hasContent && (
         <div
-          className={`mx-auto grid max-w-[70rem] grid-cols-[12rem_1fr] gap-5 p-8 md:p-12`}
+          className={`mx-auto grid max-w-[70rem] grid-cols-[12rem_1fr] gap-5`}
         >
           <div>
             <ul className={`flex flex-col gap-2`}>
@@ -57,7 +57,7 @@ export function DesktopMenu({
               <Link
                 aria-hidden={!hasContent}
                 aria-label={mainLink.text}
-                className={`btn-primary mt-5`}
+                className={`btn-primary`}
                 to={mainLink.url}
                 newTab={mainLink.newTab}
                 onClick={handleDesktopMenuClose}

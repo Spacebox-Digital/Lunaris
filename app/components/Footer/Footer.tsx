@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer
-      className={`md:px-contained py-8 md:py-12 xl:py-14`}
+      className={`md:px-contained`}
       style={{backgroundColor: bgColor, color: textColor}}
     >
       <div
@@ -26,10 +26,10 @@ export function Footer() {
           >
             <Link to="/" aria-label="Go to home page">
               <Svg
-                className={`w-12 text-current`}
+                className={`w-32 text-current`}
                 src="/svgs/logo.svg#logo"
                 title="Storefront logo"
-                viewBox="0 0 31 35"
+                viewBox="0 0 1265.32 308.05"
               />
             </Link>
 

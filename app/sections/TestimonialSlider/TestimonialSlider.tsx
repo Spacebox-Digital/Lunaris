@@ -17,9 +17,9 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
 
   return (
     <Container container={cms.container}>
-      <div className={`md:px-contained py-12 lg:py-16`}>
+      <div className={`md:px-contained`}>
         <div
-          className={`${maxWidthClass} relative mx-auto flex flex-col items-center lg:px-14`}
+          className={`${maxWidthClass} relative mx-auto flex flex-col items-center`}
         >
           <h2 className={`text-h2 px-4 text-center`} style={{color: textColor}}>
             {heading}
@@ -27,7 +27,7 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
 
           {blocks?.length > 0 && (
             <Swiper
-              className={`!static mt-10 w-full`}
+              className={`!static w-full`}
               grabCursor
               loop={blocks.length >= 2}
               pagination={{
@@ -70,14 +70,12 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
                     >
                       <ReviewStars rating={rating} color={reviewStarColor} />
 
-                      <h3 className={`my-4 text-2xl`}>{item.title}</h3>
+                      <h3 className={`text-2xl`}>{item.title}</h3>
 
                       {item.body && <p>{item.body}</p>}
 
                       {item.author && (
-                        <p className={`mt-4 text-base font-normal`}>
-                          {item.author}
-                        </p>
+                        <p className={`text-base font-normal`}>{item.author}</p>
                       )}
                     </div>
                   </SwiperSlide>
@@ -120,7 +118,7 @@ export function TestimonialSlider({cms}: {cms: TestimonialSliderCms}) {
           )}
 
           {link?.text && (
-            <div className={`mt-10`}>
+            <div className={``}>
               <Link
                 aria-label={link.text}
                 className={`btn-primary`}

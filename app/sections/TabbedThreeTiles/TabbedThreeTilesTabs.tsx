@@ -10,7 +10,7 @@ export function TabbedThreeTilesTabs({
 }: TabbedThreeTilesTabsProps) {
   return (
     <div
-      className={`mx-auto ${maxWidthClass} mb-6 flex justify-center border-b border-border md:mb-10`}
+      className={`mx-auto ${maxWidthClass} flex justify-center border-b border-border`}
     >
       <div className={`scrollbar-hide overflow-x-auto px-4`}>
         <Tab.List as="ul" className={`flex gap-4 xs:gap-8`}>

@@ -54,7 +54,7 @@ export function HalfHeroContent({aboveTheFold, content}: HalfHeroContentProps) {
         )}
 
         {buttons?.length > 0 && (
-          <ul className={`mt-4 flex flex-col justify-center gap-4 xs:flex-row`}>
+          <ul className={`flex flex-col justify-center gap-4 xs:flex-row`}>
             {buttons.slice(0, 2).map(({link, style}, index) => {
               return (
                 <li key={index}>
