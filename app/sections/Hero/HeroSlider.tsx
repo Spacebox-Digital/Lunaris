@@ -5,6 +5,8 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {HeroSlide} from './HeroSlide';
 import type {HeroSliderProps} from './Hero.types';
 
+/* TODO: remove Swiper */
+
 export function HeroSlider({aboveTheFold, slider, slides}: HeroSliderProps) {
   const [visibleIndex, setVisibleIndex] = useState(0);
   const {activeBulletColor, autoplay, delay, effect, pagination} = slider;
