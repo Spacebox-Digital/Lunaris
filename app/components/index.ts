@@ -28,5 +28,6 @@ export * from './QuantitySelector';
 export * from './ReviewStars';
 export * from './Search';
 export * from './Select';
+export * from './Stack';
 export * from './Svg';
 export * from './ThreeTilesRow';
