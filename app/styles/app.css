@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --background: oklch(var(--b1));
+    --text: oklch(var(--bc))
+    --border: oklch(var(--b2));
+    --primary: oklch(var(--p));
+    --secondary: oklch(var(--s));
+    --accent: oklch(var(--a));
+    --accent1: oklch(var(--a));
+    --accent2: oklch(var(--ac));
+    --black: #000;
+    --off-black: #222;
+    --dark-gray: #333;
+    --medium-dark-gray: #555;
+    --medium-gray: #777;
+    --gray: #999;
+    --light-gray: #ccc;
+    --off-white: #f4f4f4;
+    --white: #fff;
+    --transparent: 'transparent';
+}
