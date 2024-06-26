@@ -9,16 +9,44 @@ delete tailwindColors['trueGray'];
 delete tailwindColors['coolGray'];
 delete tailwindColors['blueGray'];
 
-import {lunaris} from './lunaris.config';
-const colors = lunaris.theme.colors;
-console.log;
-const ui = lunaris.theme.ui;
+// import {lunaris} from './lunaris.config';
+// const colors = lunaris.theme.colors;
+// console.log;
+// const ui = lunaris.theme.ui;
 
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
       ...tailwindColors,
+      primary: tailwindColors.indigo[700],
+      primaryContent: tailwindColors.indigo[200],
+      primaryFocus: tailwindColors.indigo[800],
+      secondary: tailwindColors.pink[500],
+      secondaryContent: tailwindColors.pink[200],
+      secondaryFocus: tailwindColors.pink[600],
+      accent: tailwindColors.teal[400],
+      accentContent: tailwindColors.teal[900],
+      accentFocus: tailwindColors.teal[500],
+      neutral: tailwindColors.gray[700],
+      neutralContent: tailwindColors.gray[800],
+      neutralFocus: tailwindColors.gray[50],
+      base100: tailwindColors.gray[100],
+      base200: tailwindColors.gray[200],
+      base300: tailwindColors.gray[300],
+      baseContent: tailwindColors.gray[800],
+
+      // ===OTHER COLORS===
+      info: tailwindColors.cyan[500],
+      infoContent: tailwindColors.cyan[900],
+      success: tailwindColors.green[400],
+      successContent: tailwindColors.green[900],
+      warning: tailwindColors.yellow[500],
+      warningContent: tailwindColors.yellow[900],
+      error: tailwindColors.red[400],
+      errorContent: tailwindColors.red[900],
+      danger: tailwindColors.red[400],
+      dangerContent: tailwindColors.red[900],
     },
   },
   daisyui: {
@@ -29,69 +57,68 @@ module.exports = {
           // Note: default `text-base-content` added to <html> element in Document.tsx. Change it there if you want to change the default text color.
 
           // main theme colors
-          primary: colors.primary,
-          'primary-content': colors.primaryContent,
-          'primary-focus': colors.primaryFocus,
-          secondary: colors.secondary,
-          'secondary-content': colors.secondaryContent,
-          'secondary-focus': colors.secondaryFocus,
-          accent: colors.accent,
-          'accent-content': colors.accentContent,
-          'accent-focus': colors.accentFocus,
-          neutral: colors.neutral,
-          'neutral-content': colors.neutralContent,
-          'neutral-focus': colors.neutralFocus,
-          'base-100': colors.base100,
-          'base-200': colors.base200,
-          'base-300': colors.base300,
-          'base-content': colors.baseContent,
+          primary: tailwindColors.primary,
+          'primary-content': tailwindColors.primaryContent,
+          'primary-focus': tailwindColors.primaryFocus,
+          secondary: tailwindColors.secondary,
+          'secondary-content': tailwindColors.secondaryContent,
+          'secondary-focus': tailwindColors.secondaryFocus,
+          accent: tailwindColors.accent,
+          'accent-content': tailwindColors.accentContent,
+          'accent-focus': tailwindColors.accentFocus,
+          neutral: tailwindColors.neutral,
+          'neutral-content': tailwindColors.neutralContent,
+          'neutral-focus': tailwindColors.neutralFocus,
+          'base-100': tailwindColors.base100,
+          'base-200': tailwindColors.base200,
+          'base-300': tailwindColors.base300,
+          'base-content': tailwindColors.baseContent,
 
-          // other colors
-          info: colors.info,
-          'info-content': colors.infoContent,
-          success: colors.success,
-          'success-content': colors.successContent,
-          warning: colors.warning,
-          'warning-content': colors.warningContent,
-          error: colors.error,
-          'error-content': colors.errorContent,
-          danger: colors.danger,
-          'danger-content': colors.dangerContent,
+          // other tailwindColors
+          info: tailwindColors.info,
+          'info-content': tailwindColors.infoContent,
+          success: tailwindColors.success,
+          'success-content': tailwindColors.successContent,
+          warning: tailwindColors.warning,
+          'warning-content': tailwindColors.warningContent,
+          error: tailwindColors.error,
+          'error-content': tailwindColors.errorContent,
+          danger: tailwindColors.danger,
+          'danger-content': tailwindColors.dangerContent,
 
           // containers
-          '--rounded-box': ui.roundedBox,
+          '--rounded-box': '1rem',
 
           // buttons
-          '--rounded-btn': ui.roundedBtn,
-          '--border-btn': ui.borderBtn,
-          '--animation-btn': ui.animationBtn,
-          '--btn-focus-scale': ui.btnFocusScale,
+          '--rounded-btn': '0.5rem',
+          '--border-btn': '1px',
+          '--animation-btn': '0.25s',
+          '--btn-focus-scale': '0.95',
 
           // inputs
-          '--animation-input': ui.animationInput,
+          '--animation-input': '0.2s',
 
           // tabs
-          '--tab-border': ui.tabBorder,
-          '--tab-radius': ui.tabRadius,
-          '--tab-border': ui.tabBorder,
+          '--tab-border': '1px',
+          '--tab-radius': '0.5rem',
 
           // badges
-          '--rounded-badge': ui.roundedBadge,
+          '--rounded-badge': '1.9rem',
 
           // toggle
-          '--tglbg': ui.tglbg,
+          '--tglbg': tailwindColors.gray[200],
 
           // tooltips
-          '--tooltip-color': ui.tooltipColor,
-          '--tooltip-text-color': ui.tooltipTextColor,
+          '--tooltip-color': tailwindColors.gray[800],
+          '--tooltip-text-color': tailwindColors.gray[100],
 
           // glass
-          '--glass-blur': ui.glassBlur,
-          '--glass-opacity': ui.glassOpacity,
-          '--glass-border-opacity': ui.glassBorderOpacity,
-          '--glass-reflex-degree': ui.glassReflexDegree,
-          '--glass-reflex-opacity': ui.glassReflexOpacity,
-          '--glass-text-shadow-opacity': ui.glassTextShadowOpacity,
+          '--glass-blur': '5px',
+          '--glass-opacity': '25%',
+          '--glass-border-opacity': '15%',
+          '--glass-reflex-degree': '45deg',
+          '--glass-reflex-opacity': '10',
+          '--glass-text-shadow-opacity': '30',
         },
       },
     ],
