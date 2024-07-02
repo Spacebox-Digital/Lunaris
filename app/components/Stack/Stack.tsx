@@ -30,7 +30,7 @@ export function Stack({
     const flexWClass = flexWrapClass({wrap: wrap});
     const gapClass = gapSpacingClass({gap: gap});
 
-    console.log('gap, gapClass', gap, gapClass);
+    // console.log('gap, gapClass', gap, gapClass);
 
     return (
         <div

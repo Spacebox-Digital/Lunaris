@@ -31,6 +31,7 @@ export function Navigation({
     const customer = useCustomer();
     const {openCart, openSearch} = useGlobal();
     const {header} = useSettings();
+    console.log('header in Navigation', header);
     const {logoPositionDesktop, menuItems} = {...header?.menu};
     const gridColsClassDesktop =
         logoPositionDesktop === 'center'
@@ -41,9 +42,11 @@ export function Navigation({
     const menuOrderClassDesktop =
         logoPositionDesktop === 'center' ? 'lg:order-1' : 'lg:order-2';
 
+    const bgColor = header?.menu?.bgColor;
+
     return (
         <div
-            className={`px-contained relative z-[1] grid flex-1 grid-cols-[1fr_auto_1fr] gap-4 border-b border-b-border bg-background transition md:gap-8 ${gridColsClassDesktop}`}
+            className={`px-contained relative z-[1] grid flex-1 grid-cols-[1fr_auto_1fr] gap-4 border-b border-b-border bg-background transition md:gap-8 ${gridColsClassDesktop} ${bgColor}`}
         >
             <div
                 className={`order-2 flex items-center ${logoOrderClassDesktop}`}

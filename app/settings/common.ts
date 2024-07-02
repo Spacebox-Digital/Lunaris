@@ -30,6 +30,26 @@ export const COLORS = [
     {label: 'Transparent', value: 'transparent'},
 ];
 
+export const BG_COLORS = [
+    {label: 'Background', value: 'bg-[var(--background)]'},
+    {label: 'Text', value: 'bg-[var(--text)]'},
+    {label: 'Border', value: 'bg-[var(--border)]'},
+    {label: 'Primary', value: 'bg-[var(--primary)]'},
+    {label: 'Secondary', value: 'bg-[var(--secondary)]'},
+    {label: 'Accent 1', value: 'bg-[var(--accent1)]'},
+    {label: 'Accent 2', value: 'bg-[var(--accent2)]'},
+    {label: 'Black', value: 'bg-[var(--black)]'},
+    {label: 'Off Black', value: 'bg-[var(--off-black)]'},
+    {label: 'Dark Gray', value: 'bg-[var(--dark-gray)]'},
+    {label: 'Medium Dark Gray', value: 'bg-[var(--medium-dark-gray)]'},
+    {label: 'Medium Gray', value: 'bg-[var(--medium-gray)]'},
+    {label: 'Gray', value: 'bg-[var(--gray)]'},
+    {label: 'Light Gray', value: 'bg-[var(--light-gray)]'},
+    {label: 'Off White', value: 'bg-[var(--off-white)]'},
+    {label: 'White', value: 'bg-[var(--white)]'},
+    {label: 'Transparent', value: 'bg-[transparent]'},
+];
+
 export const TEXT_COLORS = {
     mobile: [
         {label: 'Background', value: 'text-[var(--background)]'},
