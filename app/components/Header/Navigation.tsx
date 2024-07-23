@@ -32,6 +32,7 @@ export function Navigation({
     const {openCart, openSearch} = useGlobal();
     const {header} = useSettings();
     console.log('header in Navigation', header);
+    const horizontalPadding = header?.menu?.desktopHorizontalPadding || 'px-4';
     const {logoPositionDesktop, menuItems} = {...header?.menu};
     const gridColsClassDesktop =
         logoPositionDesktop === 'center'
@@ -46,7 +47,7 @@ export function Navigation({
 
     return (
         <div
-            className={`px-contained relative z-[1] grid flex-1 grid-cols-[1fr_auto_1fr] gap-4 border-b border-b-border bg-background transition md:gap-8 ${gridColsClassDesktop} ${bgColor}`}
+            className={`relative z-[1] grid flex-1 grid-cols-[1fr_auto_1fr] gap-4 border-b border-b-border bg-background transition md:gap-8 ${gridColsClassDesktop} ${bgColor} ${horizontalPadding}`}
         >
             <div
                 className={`order-2 flex items-center ${logoOrderClassDesktop}`}
@@ -65,47 +66,43 @@ export function Navigation({
                 className={`order-1 flex items-center ${menuOrderClassDesktop}`}
             >
                 <nav className={`hidden h-full lg:flex`}>
-                    <ul className={`flex`}>
-                        <Stack gap={4}>
-                            {menuItems?.map((item, index) => {
-                                const isHovered =
-                                    item.menuItem?.text ===
-                                    desktopMenuContent?.menuItem?.text;
+                    <ul className={`flex gap-4`}>
+                        {menuItems?.map((item, index) => {
+                            const isHovered =
+                                item.menuItem?.text ===
+                                desktopMenuContent?.menuItem?.text;
 
-                                return (
-                                    <li key={index} className={`flex`}>
-                                        <Link
-                                            aria-label={item.menuItem?.text}
-                                            className={`group relative flex cursor-pointer items-center transition ${
+                            return (
+                                <li key={index} className={`flex`}>
+                                    <Link
+                                        aria-label={item.menuItem?.text}
+                                        className={`group relative flex cursor-pointer items-center transition ${
+                                            isHovered
+                                                ? 'bg-offWhite'
+                                                : 'bg-background'
+                                        }`}
+                                        to={item.menuItem?.url}
+                                        onClick={handleDesktopMenuClose}
+                                        onMouseEnter={() =>
+                                            handleDesktopMenuHoverIn(index)
+                                        }
+                                        onMouseLeave={handleDesktopMenuHoverOut}
+                                    >
+                                        <p className={`text-nav`}>
+                                            {item.menuItem?.text}
+                                        </p>
+
+                                        <div
+                                            className={`absolute left-0 top-[calc(100%_-_2px)] h-[3px] w-full origin-center scale-0 border-t-2 border-t-primary bg-transparent transition after:w-full group-hover:scale-100 ${
                                                 isHovered
-                                                    ? 'bg-offWhite'
-                                                    : 'bg-background'
+                                                    ? 'scale-100'
+                                                    : 'scale-0'
                                             }`}
-                                            to={item.menuItem?.url}
-                                            onClick={handleDesktopMenuClose}
-                                            onMouseEnter={() =>
-                                                handleDesktopMenuHoverIn(index)
-                                            }
-                                            onMouseLeave={
-                                                handleDesktopMenuHoverOut
-                                            }
-                                        >
-                                            <p className={`text-nav`}>
-                                                {item.menuItem?.text}
-                                            </p>
-
-                                            <div
-                                                className={`absolute left-0 top-[calc(100%_-_2px)] h-[3px] w-full origin-center scale-0 border-t-2 border-t-primary bg-transparent transition after:w-full group-hover:scale-100 ${
-                                                    isHovered
-                                                        ? 'scale-100'
-                                                        : 'scale-0'
-                                                }`}
-                                            />
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </Stack>
+                                        />
+                                    </Link>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </nav>
 

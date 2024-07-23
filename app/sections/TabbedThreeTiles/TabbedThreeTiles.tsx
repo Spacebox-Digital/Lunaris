@@ -13,14 +13,14 @@ export function TabbedThreeTiles({cms}: {cms: TabbedThreeTilesCms}) {
     const {button, heading, section, tabs} = cms;
     const {aspectRatio, fullWidth, textColor} = {...section};
     const maxWidthClass = fullWidth
-        ? 'max-w-none'
+        ? 'max-w-full w-full'
         : 'max-w-[var(--content-max-width)]';
 
     console.log('cms in tabbed three tiles', cms);
 
     return (
         <Container container={cms.container}>
-            <div className={`lg:px-contained py-contained`}>
+            <div className={`${maxWidthClass}`}>
                 {heading && (
                     <h2
                         className={`text-h2 text-center`}
@@ -32,7 +32,7 @@ export function TabbedThreeTiles({cms}: {cms: TabbedThreeTilesCms}) {
 
                 <Tab.Group
                     as="div"
-                    className={`mx-auto`}
+                    className={`mx-auto w-full`}
                     selectedIndex={activeTabIndex}
                     onChange={setActiveTabIndex}
                 >

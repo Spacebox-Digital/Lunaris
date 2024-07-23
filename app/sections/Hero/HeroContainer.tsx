@@ -15,7 +15,7 @@ export function HeroContainer({children, cms}: HeroContainerProps) {
     const maxWidthContainerClass = section?.fullWidth
         ? 'max-w-none'
         : 'max-w-[var(--content-max-width)]';
-    const fullBleedClass = section?.fullBleed ? '' : 'px-contained';
+    const fullBleedClass = section?.fullBleed ? '' : '';
 
     const desktopIsAspectRatioType =
         section?.desktop?.heightType === 'aspect-ratio';

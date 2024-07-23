@@ -119,6 +119,7 @@ module.exports = {
           '--glass-reflex-degree': '45deg',
           '--glass-reflex-opacity': '10',
           '--glass-text-shadow-opacity': '30',
+          '--content-max-width': '100vw',
         },
       },
     ],

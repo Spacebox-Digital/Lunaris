@@ -17,6 +17,9 @@ export interface HeaderSettings {
         }[];
     };
     menu: {
+        desktopHorizontalPadding: string;
+        tabletHorizontalPadding: string;
+        mobileHorizontalPadding: string;
         menuItems: {
             menuItem: LinkCms;
             links: {
@@ -157,6 +160,43 @@ export default {
                     component: 'select',
                     options: BG_COLORS,
                     defaultValue: 'bg-[var(--white)]',
+                },
+                {
+                    label: 'Horizontal Padding (mobile)',
+                    name: 'mobileHorizontalPadding',
+                    component: 'select',
+                    options: [
+                        {label: 'None', value: 'px-0'},
+
+                        {label: 'Small', value: 'px-4'},
+                        {label: 'Medium', value: 'px-6'},
+                        {label: 'Large', value: 'px-8'},
+                    ],
+                    defaultValue: 'px-4',
+                },
+                {
+                    label: 'Horizontal Padding (tablet)',
+                    name: 'tabletHorizontalPadding',
+                    component: 'select',
+                    options: [
+                        {label: 'None', value: 'px-0'},
+                        {label: 'Small', value: 'px-4'},
+                        {label: 'Medium', value: 'px-6'},
+                        {label: 'Large', value: 'px-8'},
+                    ],
+                    defaultValue: 'px-4',
+                },
+                {
+                    label: 'Horizontal Padding (desktop)',
+                    name: 'desktopHorizontalPadding',
+                    component: 'select',
+                    options: [
+                        {label: 'None', value: 'px-0'},
+                        {label: 'Small', value: 'px-4'},
+                        {label: 'Medium', value: 'px-6'},
+                        {label: 'Large', value: 'px-8'},
+                    ],
+                    defaultValue: 'px-4',
                 },
                 {
                     label: 'Menu Items',
